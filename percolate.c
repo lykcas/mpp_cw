@@ -14,12 +14,16 @@ int main(int argc, char *argv[])
   /*
    *  Define the main arrays for the simulation
    */
-
+  
+  
   int old[M+2][N+2], new[M+2][N+2];
   int rank, size;
   int **smallmap;
   smallmap = arralloc(sizeof(int), 2, M, N);
-
+  int **submap;
+  submap = arralloc(sizeof(int), 2, L, L);
+  int car = L/ (M); //2 * 2
+  
   /*
    *  Additional array WITHOUT halos for initialisation and IO. This
    *  is of size LxL because, even in our parallel program, we do
@@ -40,17 +44,25 @@ int main(int argc, char *argv[])
    *  Local variables
    */
 
-  int i, j, nhole, step, maxstep, oldval, newval, nchange, printfreq;
+  int i, j, v, o, nhole, step, maxstep, oldval, newval, nchange, printfreq;
   int itop, ibot, perc;
   double r;
+  
+  MPI_Datatype mpi_vec_type;
+  MPI_Datatype mpi_rec_vec;
+  
+  // printf("START2\n");
+  int dims[2] = {car, car};
+  int periods[2] = {1, 0}; 
+  int left_nbr, right_nbr, up_nbr, down_nbr;
+  int coord[2];
 
-
+  
   if (argc != 2)
     {
       printf("Usage: percolate <seed>\n");
       return 1;
     }
-
   /*
    *  Set most important value: the rock density rho (between 0 and 1)
    */
@@ -66,25 +78,28 @@ int main(int argc, char *argv[])
   printf("percolate: params are L = %d, rho = %f, seed = %d\n", L, rho, seed);
 
   rinit(seed);
-
-
   MPI_Comm comm;
-  MPI_Status status;
-
+  // MPI_Status status;
+  
   MPI_Init(NULL, NULL);
   MPI_Comm_size(MPI_COMM_WORLD, &size);
-  MPI_Request reqa, reqb, reqc, reqd;
+  MPI_Request reqa, reqb, reqc, reqd, reqs;
   MPI_Status sta;
-  int dims[1] = {0};
-  MPI_Dims_create(size, 1, dims);
-  int periods[1] = {1}; 
-  int left_nbr, right_nbr;
-  MPI_Cart_create( MPI_COMM_WORLD, 1, dims, periods, 0, &comm );
+  MPI_Type_vector(M+2, 1, M+2, MPI_INT, &mpi_vec_type);
+  MPI_Type_commit(&mpi_vec_type);
+  MPI_Type_vector(M, M, L, MPI_INT, &mpi_rec_vec);
+  MPI_Type_commit(&mpi_rec_vec);
+  MPI_Dims_create(size, 2, dims);
+  MPI_Cart_create( MPI_COMM_WORLD, 2, dims, periods, 0, &comm );
   MPI_Comm_rank(comm, &rank);
-  MPI_Cart_shift(comm, 0, 1, &left_nbr, &right_nbr );
-  //check size=P
-  if (size != 4) {
-    printf("Please run with 4 processes.\n");fflush(stdout);
+  MPI_Cart_coords(comm, rank, 2, coord);
+  MPI_Cart_shift(comm, 0, 1, &up_nbr, &down_nbr );
+  MPI_Cart_shift(comm, 1, 1, &left_nbr, &right_nbr);
+
+  printf("rank %d coords : %d,%d nbrs: up %d, down %d, left %d, right %d\n", rank, coord[0], 
+    coord[1], up_nbr, down_nbr, left_nbr, right_nbr);
+  if (size != 2*car) {
+    printf("Please run with 16 processes.\n");fflush(stdout);
     MPI_Abort(MPI_COMM_WORLD, 1);
   }
 
@@ -114,10 +129,22 @@ int main(int argc, char *argv[])
     rho, 1.0 - ((double) nhole)/((double) L*L) );
   }
 
-  
 
-  MPI_Scatter(&(map[0][0]), M*N, MPI_INT, &(smallmap[0][0]), M*N, MPI_INT, 0, comm);
+  MPI_Bcast(&(map[0][0]), L*L, MPI_INT, 0, comm);
 
+
+  int x_row = rank / car * (M);
+  int x_col = rank % car * (M);
+
+  int i_small = 0, j_small = 0;
+  for (i = x_row; i < x_row + (M); i++) {
+    for (j = x_col; j < x_col + (M); j++) {
+      smallmap[i_small][j_small] = map[i][j];
+      j_small += 1;
+    }
+    i_small += 1;
+    j_small = 0;
+  }
   
 
 
@@ -143,9 +170,11 @@ int main(int argc, char *argv[])
       old[M+1][j] = 0;
     }
 
+
    /*
     *  Update for a fixed number of iterations
     */
+
 
   maxstep = 16*L;
   printfreq = 100;
@@ -153,75 +182,24 @@ int main(int argc, char *argv[])
   step = 1;
   nchange = 1;
 
-  // if (rank == 0) {
-  //   for (i = 1; i <= M+2; i++) {
-  //     for (j = 1; j <= N+2; j++) {
-  //       printf("%3d ", old[i-1][j-1]);
-  //     }
-  //     printf("\n");
-  //   }
-  // }
-  // printf("\n");
-  // MPI_Barrier(comm);
-  // if (rank == 1) {
-  //   for (i = 1; i <= M+2; i++) {
-  //     for (j = 1; j <= N+2; j++) {
-  //       printf("%3d ", old[i-1][j-1]);
-  //     }
-  //     printf("\n");
-  //   }
-  // }
-  // printf("\n");
-  // MPI_Barrier(comm);
-  // if (rank == 2) {
-  //   for (i = 1; i <= M+2; i++) {
-  //     for (j = 1; j <= N+2; j++) {
-  //       printf("%3d ", old[i-1][j-1]);
-  //     }
-  //     printf("\n");
-  //   }
-  // }
-  // printf("\n");
-  // MPI_Barrier(comm);
-  // if (rank == 3) {
-  //   for (i = 1; i <= M+2; i++) {
-  //     for (j = 1; j <= N+2; j++) {
-  //       printf("%3d ", old[i-1][j-1]);
-  //     }
-  //     printf("\n");
-  //   }
-  // }
-  // printf("\n");
-  // MPI_Barrier(comm);
-
   while (step <= maxstep)
     {
-      MPI_Isend(&old[M], N, MPI_INT, right_nbr, N, comm, &reqa);
-      MPI_Irecv(&old[0], N, MPI_INT, left_nbr, N, comm, &reqb);
-      MPI_Isend(&old[1], N, MPI_INT, left_nbr, N, comm, &reqc);
-      MPI_Irecv(&old[M+1], N, MPI_INT, right_nbr, N, comm, &reqd);
+      
+      MPI_Isend(&old[1], (M)+2, MPI_INT, up_nbr, 1, comm, &reqs);
+      MPI_Isend(&old[M], (M)+2, MPI_INT, down_nbr, 2, comm, &reqs);
+      MPI_Isend(&old[0][1], 1, mpi_vec_type, left_nbr, 1, comm, &reqs);
+      MPI_Isend(&old[0][M], 1, mpi_vec_type, right_nbr, 2, comm, &reqs);
+
+      MPI_Irecv(&old[0], (M)+2, MPI_INT, up_nbr, 2, comm, &reqa);
+      MPI_Irecv(&old[M+1], (M)+2, MPI_INT, down_nbr, 1, comm, &reqb);
+      MPI_Irecv(&old[0][0], 1, mpi_vec_type, left_nbr, 2, comm, &reqc);
+      MPI_Irecv(&old[0][M+1], 1, mpi_vec_type, right_nbr, 1, comm, &reqd);
+      
       MPI_Wait(&reqa, &sta);
       MPI_Wait(&reqb, &sta);
       MPI_Wait(&reqc, &sta);
       MPI_Wait(&reqd, &sta);
       nchange = 0;
-
-      // if (step == 1) {
-      //   int ranki;
-      //   printf("This is step %d:\n", step);
-      //   for (ranki = 0; ranki < 4; ranki++) {
-      //     if (rank == ranki) {
-      //     for (i = 1; i <= M+2; i++) {
-      //       for (j = 1; j <= N+2; j++) {
-      //         printf("%3d ", old[i-1][j-1]);
-      //       }
-      //       printf("\n");
-      //     }
-      //   }
-      //   printf("\n");
-      //   MPI_Barrier(comm);
-      //   }
-      // }
 
       for (i=1; i<=M; i++) {
 	      for (j=1; j<=N; j++) {
@@ -296,56 +274,34 @@ int main(int argc, char *argv[])
 	  }
     
   }
-
-  // if (rank == 0) {
-  //   for (i = 1; i <= M; i++) {
-  //     for (j = 1; j <= N; j++) {
-  //       printf("%d ", smallmap[i-1][j-1]);
-  //     }
-  //     printf("\n");
-  //   }
-  // }
-  // printf("\n");
-  // MPI_Barrier(comm);
-  // if (rank == 1) {
-  //   for (i = 1; i <= M; i++) {
-  //     for (j = 1; j <= N; j++) {
-  //       printf("%d ", smallmap[i-1][j-1]);
-  //     }
-  //     printf("\n");
-  //   }
-  // }
-  // printf("\n");
-  // MPI_Barrier(comm);
-  // if (rank == 2) {
-  //   for (i = 1; i <= M; i++) {
-  //     for (j = 1; j <= N; j++) {
-  //       printf("%d ", smallmap[i-1][j-1]);
-  //     }
-  //     printf("\n");
-  //   }
-  // }
-  // printf("\n");
-  // MPI_Barrier(comm);
-  // if (rank == 3) {
-  //   for (i = 1; i <= M; i++) {
-  //     for (j = 1; j <= N; j++) {
-  //       printf("%d ", smallmap[i-1][j-1]);
-  //     }
-  //     printf("\n");
-  //   }
-  // }
-  // printf("\n");
   // MPI_Barrier(comm);
 
-  MPI_Gather(&(smallmap[0][0]), M*N, MPI_INT, &(map[0][0]), M*N, MPI_INT, 0, comm);
+  MPI_Isend(&(smallmap[0][0]), (M)*(M), MPI_INT, 0, rank, comm, &reqs);
 
-  // if (rank == 0){for (i = 0; i < L; i++) {
-  //   for (j = 0; j < L; j++) {
-  //     printf("%d ", map[i][j]);
-  //   }
-  //   printf("\n");
-  // }}
+  
+  if (rank == 0) { 
+    int rankid = 0;
+    for (i = 0; i < L; ) {
+      for (j = 0; j < L; ) {
+        MPI_Irecv(&(map[i][j]), 1, mpi_rec_vec, MPI_ANY_SOURCE, rankid, comm, &reqa);
+        MPI_Wait(&reqa, &sta);
+        rankid += 1;
+        j += (M);
+      }
+      i += (M);
+    }
+
+    printf("This is final map:\n");
+    for (i = 0; i < L; i++) {
+      for (j = 0; j < L; j++) {
+        printf("%d ", map[i][j]);
+      }
+      printf("\n");
+    }
+  }
+
+
+
 
   /*
    *  Test to see if percolation occurred by looking for positive numbers
@@ -382,12 +338,14 @@ int main(int argc, char *argv[])
     *  clusters etc.
     */
 
-    percwrite("mapdebug.pgm", &(map[0][0]), 8);
+    percwrite("map288.pgm", &(map[0][0]), 8);
   }
 
-  // // MPI_Barrier(MPI_COMM_WORLD);
+  
 
   MPI_Finalize();
   free((void *) smallmap);
+  free((void *) submap);
+  free((void *) map);
   return 0;
 }

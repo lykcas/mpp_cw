@@ -71,9 +71,22 @@ int main(int argc, char *argv[])
 	int dims[2] = { 4,4 };
 	int periods[2] = { 0,0 };
 	int reorder = 0;
+	int *inbuf;
+	inbuf = arralloc(sizeof(int), 1, 4);
+	int inf = 0;
+	for (inf = 0; inf < 4; inf++) {
+		inbuf[inf] = -1;
+	}
+	// int *nbrs;
+	// nbrs = arralloc(sizeof(int), 1, 4);
+	int nbrs[4];
+	// int *coords;
+	// coords = arralloc(sizeof(int), 1, 2);
+	int coords[2];
+	int id;
 
-	MPI_Request *reqs;
-	reqs = arralloc(sizeof(MPI_Request), 1, 8);
+	MPI_Request ra, rb, rc, rd, rs;
+	// reqs = arralloc(sizeof(MPI_Request), 1, 8);
 	MPI_Status stats;
 	MPI_Comm cartcomm;
 	MPI_Init(&argc, &argv);
@@ -81,17 +94,7 @@ int main(int argc, char *argv[])
 	MPI_Comm_size(MPI_COMM_WORLD, &numtasks);
 
 	// int	inbuf[4] = { MPI_PROC_NULL,MPI_PROC_NULL,MPI_PROC_NULL,MPI_PROC_NULL, };
-	int *inbuf;
-	inbuf = arralloc(sizeof(int), 1, 4);
-	int inf = 0;
-	for (inf = 0; inf < 4; inf++) {
-		inbuf[inf] = -1;
-	}
-	int *nbrs;
-	nbrs = arralloc(sizeof(int), 1, 4);
-	// int nbrs[4];
-	int *coords;
-	coords = arralloc(sizeof(int), 1, 2);
+	
 	
 
 	if (numtasks == SIZE) {
@@ -109,40 +112,47 @@ int main(int argc, char *argv[])
 		//cout << "rank " << rank << " vertical shift coords : " << coords[0] << "," << coords[1] << endl;
 
 		MPI_Cart_shift(cartcomm, 1, 1, &nbrs[2], &nbrs[3]);	// 笛卡尔移位操作,获取当前坐标位置的左右位置秩
+		MPI_Cart_rank(cartcomm, coords, &id);
 
 		//cout << "rank " << rank << " horizen shift coords : " << coords[0] << "," << coords[1] << endl;
-		printf("rank %d coords : %d,%d nbrs: %d, %d, %d, %d\n", rank, coords[0], coords[1], nbrs[0], nbrs[1], nbrs[2], nbrs[3]);
+		printf("rank %d coords : %d,%d nbrs: %d, %d, %d, %d\n", id, coords[0], coords[1], nbrs[0], nbrs[1], nbrs[2], nbrs[3]);
 		// cout << "rank " << rank << " coords : " << coords[0] << "," << coords[1] << " nbrs : " << nbrs[UP] << "," << nbrs[DOWN] << "," << nbrs[LEFT] << "," << nbrs[RIGHT] << endl;
 
-		int rank_now;
-		outbuf = rank;
-		rank_now = rank;
-		for (i = 0; i < 4; i++) {
+		outbuf = id;
+		// for (i = 0; i < 4; i++) {
 
 			// 将数据分别发送给上下左右4个邻居
 			// 从上下左右4个邻居接收数据
 
-			dest = nbrs[i];
-			source = nbrs[i];
+			// dest = nbrs[i];
+			// source = nbrs[i];
 
-			if (-1 == dest) continue;
+			// if (-1 == dest) continue;
 
 			// 发送
-			MPI_Isend(&outbuf, 1, MPI_INT, dest, tag,
-				MPI_COMM_WORLD, &reqs[i]);
-				// printf("%d\n", reqs[i]);
+			MPI_Isend(&outbuf, 1, MPI_INT, nbrs[0], tag, MPI_COMM_WORLD, &rs);
+			MPI_Isend(&outbuf, 1, MPI_INT, nbrs[1], tag, MPI_COMM_WORLD, &rs);
+			MPI_Isend(&outbuf, 1, MPI_INT, nbrs[2], tag, MPI_COMM_WORLD, &rs);
+			MPI_Isend(&outbuf, 1, MPI_INT, nbrs[3], tag, MPI_COMM_WORLD, &rs);
+			
 
 			// 接收
-			MPI_Irecv(&inbuf[i], 1, MPI_INT, source, tag,
-				MPI_COMM_WORLD, &reqs[4+i]);
+			MPI_Irecv(&inbuf[0], 1, MPI_INT, nbrs[0], tag, MPI_COMM_WORLD, &ra);
+			MPI_Irecv(&inbuf[1], 1, MPI_INT, nbrs[1], tag, MPI_COMM_WORLD, &rb);
+			MPI_Irecv(&inbuf[2], 1, MPI_INT, nbrs[2], tag, MPI_COMM_WORLD, &rc);
+			MPI_Irecv(&inbuf[3], 1, MPI_INT, nbrs[3], tag, MPI_COMM_WORLD, &rd);
+			MPI_Wait(&ra, &stats);
+			MPI_Wait(&rb, &stats);
+			MPI_Wait(&rc, &stats);
+			MPI_Wait(&rd, &stats);
 				// printf("rec: %d\n", reqs[i+4]);
 
-		}
+		// }
 		// printf("%d success!\n", rank_now);
-		MPI_Waitall(8, reqs, &stats);
+		// MPI_Waitall(8, reqs, &stats);
 		// if (rank_now == 0){
-					printf("rank= 0 coords= %d %d neighbors(u,d,l,r)= %d %d %d %d\n", coords[0], coords[1], nbrs[0], nbrs[1], nbrs[2], nbrs[3]);
-				printf("rank= %d inbuf(u,d,l,r)= %d %d %d %d\n", rank_now, inbuf[0], inbuf[1], inbuf[2], inbuf[3]);
+			printf("rank= %d coords= %d %d neighbors(u,d,l,r)= %d %d %d %d\n", id, coords[0], coords[1], nbrs[0], nbrs[1], nbrs[2], nbrs[3]);
+			printf("rank= %d inbuf(u,d,l,r)= %d %d %d %d\n", id, inbuf[0], inbuf[1], inbuf[2], inbuf[3]);
 		// 		}
 		
 
