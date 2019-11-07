@@ -16,8 +16,8 @@
  *  processes, then M = L/P and N = L
  */
 
-#define M L/2
-#define N L/2
+#define M L/4
+#define N L/4
 
 /*
  *  Prototypes for supplied functions

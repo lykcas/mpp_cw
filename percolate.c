@@ -75,7 +75,7 @@ int main(int argc, char *argv[])
 
   seed = atoi(argv[1]);
 
-  printf("percolate: params are L = %d, rho = %f, seed = %d\n", L, rho, seed);
+  if (rank == 0) {printf("percolate: params are L = %d, rho = %f, seed = %d\n", L, rho, seed);}
 
   rinit(seed);
   MPI_Comm comm;
@@ -98,7 +98,7 @@ int main(int argc, char *argv[])
 
   printf("rank %d coords : %d,%d nbrs: up %d, down %d, left %d, right %d\n", rank, coord[0], 
     coord[1], up_nbr, down_nbr, left_nbr, right_nbr);
-  if (size != 2*car) {
+  if (size != car*car) {
     printf("Please run with 16 processes.\n");fflush(stdout);
     MPI_Abort(MPI_COMM_WORLD, 1);
   }
@@ -291,13 +291,13 @@ int main(int argc, char *argv[])
       i += (M);
     }
 
-    printf("This is final map:\n");
-    for (i = 0; i < L; i++) {
-      for (j = 0; j < L; j++) {
-        printf("%d ", map[i][j]);
-      }
-      printf("\n");
-    }
+    // printf("This is final map:\n");
+    // for (i = 0; i < L; i++) {
+    //   for (j = 0; j < L; j++) {
+    //     printf("%d ", map[i][j]);
+    //   }
+    //   printf("\n");
+    // }
   }
 
 
@@ -338,7 +338,7 @@ int main(int argc, char *argv[])
     *  clusters etc.
     */
 
-    percwrite("map288.pgm", &(map[0][0]), 8);
+    percwrite("map288_16.pgm", &(map[0][0]), 8);
   }
 
   
