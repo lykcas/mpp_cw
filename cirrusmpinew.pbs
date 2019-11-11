@@ -1,0 +1,74 @@
+# This is a simple template script to run batch jobs on Cirrus at EPCC
+#
+# To submit: qsub cirrusmpinew.pbs
+#
+# For supervised practical sessions there may be a queue reserved for you,
+# so use: qsub -q RXXXXXX cirrusmpinew.pbs
+#
+# All screen output (stdout and stderr) will appear in a file called
+# myjob.pbs.oXXXXX, where XXXXX is the job number assigned at submit time.
+#
+# David Henty, EPCC, 26/09/2019
+#
+
+# You will need to change the Account value below, e.g. if your UUN is
+# s1234567 then use: "-A d171-s1234567"
+#
+# "-N myjob" sets the name of this PBS job
+# "-j oe" sends error messages to the same log file as program output
+# "-l walltime=00:01:00" sets the maximum run time to 1 minute
+# "-l place=excl" ensures that you get exclusive access to all nodes
+
+#PBS -A d171-s1951167
+#PBS -N myjob
+#PBS -j oe
+#PBS -l walltime=00:01:00
+#PBS -l place=excl
+
+# You will need to change the value of "select" below if you run on
+# more than 36 processes; the value of "ncpus" *is always 36*.
+
+#PBS -l select=1:ncpus=36
+
+module load mpt
+module load intel-compilers-18
+
+
+# Change directory back to where the job was submitted from
+
+cd $PBS_O_WORKDIR
+
+echo 'Started at' `date`
+echo '--------------------------------------------------------------------------------'
+
+# Run on 4 processes with a maximum of 36 processes on each node.
+#
+# If you need more than 36 processes you will need to increase the
+# "select" option above to ask for more nodes.  For example, for
+# between 37 and 72 processes you would use: #PBS -l select=2:ncpus=36
+
+#echo 'This is p=1'
+#mpirun -n 1 ./percolate 1564 288
+
+#echo '-------------------------------------------------------------------------------'
+
+echo 'This is p=4'
+mpiexec_mpt -n 4 ./percolate 1564 144
+
+echo '-------------------------------------------------------------------------------'
+
+#echo 'This is p=9'
+#mpirun -n 9 ./percolate 1564 96
+
+echo '-------------------------------------------------------------------------------'
+
+echo 'This is p=16'
+#mpirun -n 16 ./percolate 1564 72
+
+echo '-------------------------------------------------------------------------------'
+
+echo 'This is p=36'
+#mpirun -n 36 ./percolate 1564 46
+
+echo '--------------------------------------------------------------------------------'
+echo 'Finished at' `date`

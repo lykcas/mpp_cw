@@ -2,6 +2,7 @@
 #include <stdlib.h>
 
 #include "percolate.h"
+// #include "percolate.c"
 
 /*
  *  Function to write a percolation map in greyscale Portable Grey Map
@@ -10,9 +11,10 @@
  *  largest cluster shown in white.
  */
 
+// #define L 288
 #define MAXNCLUSTER 9   // Must be able to identify by a single digit
 
-void percwrite(char *percfile, int map[L][L], int ncluster)
+void percwrite(char *percfile, int **map, int ncluster)
 {
   FILE *fp;
 

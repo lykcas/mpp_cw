@@ -16,8 +16,7 @@
  *  processes, then M = L/P and N = L
  */
 
-#define M L/4
-#define N L/4
+
 
 /*
  *  Prototypes for supplied functions
@@ -27,7 +26,7 @@
  *  Visualisation
  */
 
-void percwrite(char *percfile, int map[M][N], int ncluster);
+void percwrite(char *percfile, int **map, int ncluster);
 
 /*
  *  Random numbers

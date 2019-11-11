@@ -9,30 +9,29 @@
  * Serial program to test for percolation of a cluster.
  */
 
+#define L 288
+// #define M L/2
+// #define N L/2
+
+
 int main(int argc, char *argv[])
 {
   /*
    *  Define the main arrays for the simulation
    */
+  if (argc != 2)
+    {
+      printf("Usage: percolate <seed>\n");
+      return 1;
+    }
   
-  
-  int old[M+2][N+2], new[M+2][N+2];
-  int rank, size;
-  int **smallmap;
-  smallmap = arralloc(sizeof(int), 2, M, N);
-  int **submap;
-  submap = arralloc(sizeof(int), 2, L, L);
-  int car = L/ (M); //2 * 2
-  
+
   /*
    *  Additional array WITHOUT halos for initialisation and IO. This
    *  is of size LxL because, even in our parallel program, we do
    *  these two steps in serial
    */
 
-  int **map;
-  map = arralloc(sizeof(int), 2, L, L);
-  // int smallmap[M][N];
   /*
    *  Variables that define the simulation
    */
@@ -45,24 +44,22 @@ int main(int argc, char *argv[])
    */
 
   int i, j, v, o, nhole, step, maxstep, oldval, newval, nchange, printfreq;
-  int itop, ibot, perc;
+  int itop, ibot, perc, nchange_count, nchange_sum, local_mapsum, global_mapsum;
   double r;
   
   MPI_Datatype mpi_vec_type;
   MPI_Datatype mpi_rec_vec;
   
   // printf("START2\n");
-  int dims[2] = {car, car};
+  int dims[2] = {0, 0};
   int periods[2] = {1, 0}; 
   int left_nbr, right_nbr, up_nbr, down_nbr;
   int coord[2];
+  double start_global, start_iteration, end_golbal, end_iteration;
+  int rank, size;
 
   
-  if (argc != 2)
-    {
-      printf("Usage: percolate <seed>\n");
-      return 1;
-    }
+  
   /*
    *  Set most important value: the rock density rho (between 0 and 1)
    */
@@ -85,11 +82,19 @@ int main(int argc, char *argv[])
   MPI_Comm_size(MPI_COMM_WORLD, &size);
   MPI_Request reqa, reqb, reqc, reqd, reqs;
   MPI_Status sta;
+  MPI_Dims_create(size, 2, dims);
+  int M = L/dims[0], N = L/dims[1];
   MPI_Type_vector(M+2, 1, M+2, MPI_INT, &mpi_vec_type);
   MPI_Type_commit(&mpi_vec_type);
   MPI_Type_vector(M, M, L, MPI_INT, &mpi_rec_vec);
   MPI_Type_commit(&mpi_rec_vec);
-  MPI_Dims_create(size, 2, dims);
+  int old[M+2][N+2], new[M+2][N+2];
+  int **smallmap;
+  smallmap = arralloc(sizeof(int), 2, M, N);
+  int **submap;
+  submap = arralloc(sizeof(int), 2, L, L);
+  int **map;
+  map = arralloc(sizeof(int), 2, L, L);
   MPI_Cart_create( MPI_COMM_WORLD, 2, dims, periods, 0, &comm );
   MPI_Comm_rank(comm, &rank);
   MPI_Cart_coords(comm, rank, 2, coord);
@@ -98,8 +103,8 @@ int main(int argc, char *argv[])
 
   printf("rank %d coords : %d,%d nbrs: up %d, down %d, left %d, right %d\n", rank, coord[0], 
     coord[1], up_nbr, down_nbr, left_nbr, right_nbr);
-  if (size != car*car) {
-    printf("Please run with 16 processes.\n");fflush(stdout);
+  if (size != dims[0] * dims[1]) {
+    printf("Please run with %d processes.\n", dims[0] * dims[1]);fflush(stdout);
     MPI_Abort(MPI_COMM_WORLD, 1);
   }
 
@@ -109,7 +114,7 @@ int main(int argc, char *argv[])
    *  value indicates a hole. For the algorithm to work, all the holes
    *  must be initialised with a unique integer
    */
-
+  start_global = MPI_Wtime();
   if(rank == 0) {
     nhole = 0;
 
@@ -132,9 +137,8 @@ int main(int argc, char *argv[])
 
   MPI_Bcast(&(map[0][0]), L*L, MPI_INT, 0, comm);
 
-
-  int x_row = rank / car * (M);
-  int x_col = rank % car * (M);
+  int x_row = rank / dims[0] * (M);
+  int x_col = rank % dims[1] * (M);
 
   int i_small = 0, j_small = 0;
   for (i = x_row; i < x_row + (M); i++) {
@@ -182,6 +186,7 @@ int main(int argc, char *argv[])
   step = 1;
   nchange = 1;
 
+  start_iteration = MPI_Wtime();
   while (step <= maxstep)
     {
       
@@ -200,11 +205,13 @@ int main(int argc, char *argv[])
       MPI_Wait(&reqc, &sta);
       MPI_Wait(&reqd, &sta);
       nchange = 0;
-
+      local_mapsum = 0;
+      global_mapsum = 0;
       for (i=1; i<=M; i++) {
 	      for (j=1; j<=N; j++) {
           oldval = old[i][j];
           newval = oldval;
+          local_mapsum += oldval;
 
           /*
           * Set new[i][j] to be the maximum value of old[i][j]
@@ -226,30 +233,44 @@ int main(int argc, char *argv[])
           new[i][j] = newval;
 	      }
 	    }
+      MPI_Reduce(&local_mapsum, &global_mapsum, 1, MPI_INT, MPI_SUM, 0, comm);
+      if (rank == 0) {
+        global_mapsum = global_mapsum / (L*L);
+      }
+      
+        /*
+        *  Report progress every now and then
+        */
 
-      /*
-       *  Report progress every now and then
-       */
+        if (step % printfreq == 0) {
+          printf("percolate: number of changes on step %d is %d\n", step, nchange);
+          if (rank == 0) printf("The average of the map array on step %d id %d\n", step, global_mapsum);
+        }
+        nchange_count = nchange;
+        MPI_Allreduce (&nchange_count, &nchange_sum, 1, MPI_INT, MPI_SUM, comm);
+        if (nchange_sum == 0) {
+          if (rank == 0) printf("Percolate finish. There are no changes in the map array.\n");
+          break;
+        }
 
-      if (step % printfreq == 0) {
-        printf("percolate: number of changes on step %d is %d\n", step, nchange);
-	    }
+        /*
+        *  Copy back in preparation for next step, omitting halos
+        */
 
-      /*
-       *  Copy back in preparation for next step, omitting halos
-       */
-
-      for (i=1; i<=M; i++) {
-        for (j=1; j<=N; j++)
-          {
-            old[i][j] = new[i][j];
-          }
-	    }
+        for (i=1; i<=M; i++) {
+          for (j=1; j<=N; j++)
+            {
+              old[i][j] = new[i][j];
+            }
+	      }
+      
 
       
       step++;
 
     }
+    // MPI_Barrier(comm);
+    end_iteration = MPI_Wtime();
 
   /*
    *  We set a maximum number of steps to ensure the algorithm always
@@ -338,12 +359,18 @@ int main(int argc, char *argv[])
     *  clusters etc.
     */
 
-    percwrite("map288_16.pgm", &(map[0][0]), 8);
+   
+
+    percwrite("map8_1.pgm", map, 8);
   }
 
   
-
+  end_golbal = MPI_Wtime();
   MPI_Finalize();
+  if (rank == 0) {
+    printf("The percolate program spend %.3f seconds in iteration part.\n", end_iteration - start_iteration);
+    printf("The percolate program spend %.3f seconds in whole program.\n", end_golbal - start_global);
+  }
   free((void *) smallmap);
   free((void *) submap);
   free((void *) map);
