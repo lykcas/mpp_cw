@@ -40,3 +40,4 @@ $(OBJ):	$(MF)
 
 clean:
 	rm -f $(EXE) $(OBJ) *.core
+

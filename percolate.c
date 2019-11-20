@@ -9,43 +9,25 @@
  * Serial program to test for percolation of a cluster.
  */
 
-#define L 288
+#define L 24
 // #define M L/2
 // #define N L/2
 
 
 int main(int argc, char *argv[])
 {
-  /*
-   *  Define the main arrays for the simulation
-   */
   if (argc != 2)
     {
       printf("Usage: percolate <seed>\n");
       return 1;
     }
-  
-
-  /*
-   *  Additional array WITHOUT halos for initialisation and IO. This
-   *  is of size LxL because, even in our parallel program, we do
-   *  these two steps in serial
-   */
-
-  /*
-   *  Variables that define the simulation
-   */
 
   int seed;
   double rho;
-
-  /*
-   *  Local variables
-   */
-
   int i, j, v, o, nhole, step, maxstep, oldval, newval, nchange, printfreq;
-  int itop, ibot, perc, nchange_count, nchange_sum, local_mapsum, global_mapsum;
+  int itop, ibot, perc, nchange_count, nchange_sum;
   double r;
+  long long local_mapsum, global_mapsum;
   
   MPI_Datatype mpi_vec_type;
   MPI_Datatype mpi_rec_vec;
@@ -75,6 +57,7 @@ int main(int argc, char *argv[])
   if (rank == 0) {printf("percolate: params are L = %d, rho = %f, seed = %d\n", L, rho, seed);}
 
   rinit(seed);
+
   MPI_Comm comm;
   // MPI_Status status;
   
@@ -84,9 +67,10 @@ int main(int argc, char *argv[])
   MPI_Status sta;
   MPI_Dims_create(size, 2, dims);
   int M = L/dims[0], N = L/dims[1];
-  MPI_Type_vector(M+2, 1, M+2, MPI_INT, &mpi_vec_type);
+  printf("----------M = %d, N = %d ----------\n", M, N);
+  MPI_Type_vector(M+2, 1, N+2, MPI_INT, &mpi_vec_type);
   MPI_Type_commit(&mpi_vec_type);
-  MPI_Type_vector(M, M, L, MPI_INT, &mpi_rec_vec);
+  MPI_Type_vector(M, N, L, MPI_INT, &mpi_rec_vec);
   MPI_Type_commit(&mpi_rec_vec);
   int old[M+2][N+2], new[M+2][N+2];
   int **smallmap;
@@ -132,17 +116,25 @@ int main(int argc, char *argv[])
     }
     printf("percolate: rho = %f, actual density = %f\n",
     rho, 1.0 - ((double) nhole)/((double) L*L) );
+
+    // printf("The map is:\n");
+    // for (i = 0; i < L; i++) {
+    //   for (j = 0; j < L; j++) {
+    //     printf("%3d ", map[i][j]);
+    //   }
+    //   printf("\n");
+    // }
   }
 
 
   MPI_Bcast(&(map[0][0]), L*L, MPI_INT, 0, comm);
 
   int x_row = rank / dims[0] * (M);
-  int x_col = rank % dims[1] * (M);
-
+  int x_col = rank % dims[1] * (N);
+  printf("----------smallmap row = %d, col = %d ----------\n", x_row, x_col);
   int i_small = 0, j_small = 0;
   for (i = x_row; i < x_row + (M); i++) {
-    for (j = x_col; j < x_col + (M); j++) {
+    for (j = x_col; j < x_col + (N); j++) {
       smallmap[i_small][j_small] = map[i][j];
       j_small += 1;
     }
@@ -190,15 +182,15 @@ int main(int argc, char *argv[])
   while (step <= maxstep)
     {
       
-      MPI_Isend(&old[1], (M)+2, MPI_INT, up_nbr, 1, comm, &reqs);
-      MPI_Isend(&old[M], (M)+2, MPI_INT, down_nbr, 2, comm, &reqs);
+      MPI_Isend(&old[1], (N)+2, MPI_INT, up_nbr, 1, comm, &reqs);
+      MPI_Isend(&old[M], (N)+2, MPI_INT, down_nbr, 2, comm, &reqs);
       MPI_Isend(&old[0][1], 1, mpi_vec_type, left_nbr, 1, comm, &reqs);
-      MPI_Isend(&old[0][M], 1, mpi_vec_type, right_nbr, 2, comm, &reqs);
+      MPI_Isend(&old[0][N], 1, mpi_vec_type, right_nbr, 2, comm, &reqs);
 
-      MPI_Irecv(&old[0], (M)+2, MPI_INT, up_nbr, 2, comm, &reqa);
-      MPI_Irecv(&old[M+1], (M)+2, MPI_INT, down_nbr, 1, comm, &reqb);
+      MPI_Irecv(&old[0], (N)+2, MPI_INT, up_nbr, 2, comm, &reqa);
+      MPI_Irecv(&old[M+1], (N)+2, MPI_INT, down_nbr, 1, comm, &reqb);
       MPI_Irecv(&old[0][0], 1, mpi_vec_type, left_nbr, 2, comm, &reqc);
-      MPI_Irecv(&old[0][M+1], 1, mpi_vec_type, right_nbr, 1, comm, &reqd);
+      MPI_Irecv(&old[0][N+1], 1, mpi_vec_type, right_nbr, 1, comm, &reqd);
       
       MPI_Wait(&reqa, &sta);
       MPI_Wait(&reqb, &sta);
@@ -233,9 +225,9 @@ int main(int argc, char *argv[])
           new[i][j] = newval;
 	      }
 	    }
-      MPI_Reduce(&local_mapsum, &global_mapsum, 1, MPI_INT, MPI_SUM, 0, comm);
+      MPI_Reduce(&local_mapsum, &global_mapsum, 1, MPI_LONG_LONG, MPI_SUM, 0, comm);
       if (rank == 0) {
-        global_mapsum = global_mapsum / (L*L);
+        global_mapsum = (double)global_mapsum / (double)(L*L);
       }
       
         /*
@@ -244,7 +236,7 @@ int main(int argc, char *argv[])
 
         if (step % printfreq == 0) {
           printf("percolate: number of changes on step %d is %d\n", step, nchange);
-          if (rank == 0) printf("The average of the map array on step %d id %d\n", step, global_mapsum);
+          if (rank == 0) printf("The average of the map array on step %d id %.4lf\n", step, global_mapsum);
         }
         nchange_count = nchange;
         MPI_Allreduce (&nchange_count, &nchange_sum, 1, MPI_INT, MPI_SUM, comm);
@@ -297,7 +289,7 @@ int main(int argc, char *argv[])
   }
   // MPI_Barrier(comm);
 
-  MPI_Isend(&(smallmap[0][0]), (M)*(M), MPI_INT, 0, rank, comm, &reqs);
+  MPI_Isend(&(smallmap[0][0]), (M)*(N), MPI_INT, 0, rank, comm, &reqs);
 
   
   if (rank == 0) { 
@@ -307,7 +299,7 @@ int main(int argc, char *argv[])
         MPI_Irecv(&(map[i][j]), 1, mpi_rec_vec, MPI_ANY_SOURCE, rankid, comm, &reqa);
         MPI_Wait(&reqa, &sta);
         rankid += 1;
-        j += (M);
+        j += (N);
       }
       i += (M);
     }
@@ -342,6 +334,14 @@ int main(int argc, char *argv[])
         }
       }
     }
+
+    // printf("The map is:\n");
+    // for (i = 0; i < L; i++) {
+    //   for (j = 0; j < L; j++) {
+    //     printf("%3d ", map[i][j]);
+    //   }
+    //   printf("\n");
+    // }
 
     if (perc != 0)
       {

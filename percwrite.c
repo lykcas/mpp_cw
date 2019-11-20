@@ -14,7 +14,7 @@
 // #define L 288
 #define MAXNCLUSTER 9   // Must be able to identify by a single digit
 
-void percwrite(char *percfile, int **map, int ncluster)
+void percwrite(char *percfile, int** map, int ncluster)
 {
   FILE *fp;
 
