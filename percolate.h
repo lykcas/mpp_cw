@@ -6,7 +6,7 @@
  *  System size L
  */
 
-#define L 24
+#define L 288
 
 /*
  *  Although overall system is square, i.e. size L x L, we will define

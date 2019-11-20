@@ -14,3 +14,5 @@ build
 # My configurations:
 *.pgm
 *.o
+.cache/
+.vscode/

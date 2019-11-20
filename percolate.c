@@ -9,7 +9,7 @@
  * Serial program to test for percolation of a cluster.
  */
 
-#define L 24
+// #define L 288
 // #define M L/2
 // #define N L/2
 
@@ -67,7 +67,7 @@ int main(int argc, char *argv[])
   MPI_Status sta;
   MPI_Dims_create(size, 2, dims);
   int M = L/dims[0], N = L/dims[1];
-  printf("----------M = %d, N = %d ----------\n", M, N);
+  // printf("----------M = %d, N = %d ----------\n", M, N);
   MPI_Type_vector(M+2, 1, N+2, MPI_INT, &mpi_vec_type);
   MPI_Type_commit(&mpi_vec_type);
   MPI_Type_vector(M, N, L, MPI_INT, &mpi_rec_vec);
@@ -117,7 +117,7 @@ int main(int argc, char *argv[])
     printf("percolate: rho = %f, actual density = %f\n",
     rho, 1.0 - ((double) nhole)/((double) L*L) );
 
-    // printf("The map is:\n");
+    // printf("The initial map is:\n");
     // for (i = 0; i < L; i++) {
     //   for (j = 0; j < L; j++) {
     //     printf("%3d ", map[i][j]);
@@ -129,20 +129,30 @@ int main(int argc, char *argv[])
 
   MPI_Bcast(&(map[0][0]), L*L, MPI_INT, 0, comm);
 
-  int x_row = rank / dims[0] * (M);
-  int x_col = rank % dims[1] * (N);
-  printf("----------smallmap row = %d, col = %d ----------\n", x_row, x_col);
+  int x_row = (rank) / dims[1] * (M);
+  int x_col = (rank) % dims[1] * (N);
+  // printf("----------smallmap in rank %d row = %d, col = %d ----------\n", rank, x_row, x_col);
   int i_small = 0, j_small = 0;
   for (i = x_row; i < x_row + (M); i++) {
+    // printf("-----------------------------------------%2d:", rank);
     for (j = x_col; j < x_col + (N); j++) {
       smallmap[i_small][j_small] = map[i][j];
+      // printf(" %3d", smallmap[i_small][j_small]);
       j_small += 1;
     }
     i_small += 1;
     j_small = 0;
+    // printf("\n");
   }
   
-
+  
+  // for (i = 0; i < M; i++) {
+  //   printf("%2d:", rank);
+  //   for (j = 0; j < N; j++) {
+  //     printf(" %3d", smallmap[i][j]);
+  //   }
+  //   printf("\n");
+  // }
 
   /*
    * Initialise the old array: copy the LxL array map to the centre of
