@@ -1,0 +1,1549 @@
+anaconda(3):ERROR:105: Unable to locate a modulefile for 'anaconda/python3s'
+******************************This is processor 1 ***********************************\n
+percolate: rho = 0.411000, actual density = 0.410622
+percolate: number of changes on step 100 is 125804
+The average of the map array on step 100 id 147691.9104
+percolate: number of changes on step 200 is 93717
+The average of the map array on step 200 id 160338.2217
+percolate: number of changes on step 300 is 71689
+The average of the map array on step 300 id 168618.0435
+percolate: number of changes on step 400 is 60219
+The average of the map array on step 400 id 174094.7349
+percolate: number of changes on step 500 is 49992
+The average of the map array on step 500 id 179192.2711
+percolate: number of changes on step 600 is 38555
+The average of the map array on step 600 id 184018.6565
+percolate: number of changes on step 700 is 31247
+The average of the map array on step 700 id 188556.9105
+percolate: number of changes on step 800 is 28409
+The average of the map array on step 800 id 191665.1421
+percolate: number of changes on step 900 is 22618
+The average of the map array on step 900 id 193582.7995
+percolate: number of changes on step 1000 is 17244
+The average of the map array on step 1000 id 194360.2899
+percolate: number of changes on step 1100 is 15246
+The average of the map array on step 1100 id 194656.3279
+percolate: number of changes on step 1200 is 16590
+The average of the map array on step 1200 id 194917.9702
+percolate: number of changes on step 1300 is 16469
+The average of the map array on step 1300 id 195310.1363
+percolate: number of changes on step 1400 is 13822
+The average of the map array on step 1400 id 195767.3628
+percolate: number of changes on step 1500 is 13283
+The average of the map array on step 1500 id 196234.3992
+percolate: number of changes on step 1600 is 12664
+The average of the map array on step 1600 id 196698.2459
+percolate: number of changes on step 1700 is 11965
+The average of the map array on step 1700 id 197116.5850
+percolate: number of changes on step 1800 is 8316
+The average of the map array on step 1800 id 197441.4556
+percolate: number of changes on step 1900 is 3799
+The average of the map array on step 1900 id 197575.5944
+percolate: number of changes on step 2000 is 2739
+The average of the map array on step 2000 id 197597.7812
+percolate: number of changes on step 2100 is 2228
+The average of the map array on step 2100 id 197599.1808
+percolate: number of changes on step 2200 is 2819
+The average of the map array on step 2200 id 197599.8657
+percolate: number of changes on step 2300 is 2051
+The average of the map array on step 2300 id 197600.4122
+percolate: number of changes on step 2400 is 2487
+The average of the map array on step 2400 id 197600.9383
+percolate: number of changes on step 2500 is 2258
+The average of the map array on step 2500 id 197601.4365
+percolate: number of changes on step 2600 is 1374
+The average of the map array on step 2600 id 197601.8636
+percolate: number of changes on step 2700 is 453
+The average of the map array on step 2700 id 197602.0578
+percolate: number of changes on step 2800 is 40
+The average of the map array on step 2800 id 197602.0971
+Percolate finish. There are no changes in the map array.
+percolate: cluster DOES NOT percolate
+percwrite: visualising the largest 8 clusters
+percwrite: cluster sizes are 167725, 19059, 18562, 14873, 10114, 6467, 5906, 5327
+percwrite: opening file <map288.pgm>
+percwrite: writing data ...
+percwrite: ... done
+percwrite: file closed
+0:
+Communicaiton time is 0.0100.
+Updating time is 11.6532.
+Iteration time is 12.4304.
+Runtime is 12.5607.
+percolate: rho = 0.411000, actual density = 0.410622
+percolate: number of changes on step 100 is 125804
+The average of the map array on step 100 id 147691.9104
+percolate: number of changes on step 200 is 93717
+The average of the map array on step 200 id 160338.2217
+percolate: number of changes on step 300 is 71689
+The average of the map array on step 300 id 168618.0435
+percolate: number of changes on step 400 is 60219
+The average of the map array on step 400 id 174094.7349
+percolate: number of changes on step 500 is 49992
+The average of the map array on step 500 id 179192.2711
+percolate: number of changes on step 600 is 38555
+The average of the map array on step 600 id 184018.6565
+percolate: number of changes on step 700 is 31247
+The average of the map array on step 700 id 188556.9105
+percolate: number of changes on step 800 is 28409
+The average of the map array on step 800 id 191665.1421
+percolate: number of changes on step 900 is 22618
+The average of the map array on step 900 id 193582.7995
+percolate: number of changes on step 1000 is 17244
+The average of the map array on step 1000 id 194360.2899
+percolate: number of changes on step 1100 is 15246
+The average of the map array on step 1100 id 194656.3279
+percolate: number of changes on step 1200 is 16590
+The average of the map array on step 1200 id 194917.9702
+percolate: number of changes on step 1300 is 16469
+The average of the map array on step 1300 id 195310.1363
+percolate: number of changes on step 1400 is 13822
+The average of the map array on step 1400 id 195767.3628
+percolate: number of changes on step 1500 is 13283
+The average of the map array on step 1500 id 196234.3992
+percolate: number of changes on step 1600 is 12664
+The average of the map array on step 1600 id 196698.2459
+percolate: number of changes on step 1700 is 11965
+The average of the map array on step 1700 id 197116.5850
+percolate: number of changes on step 1800 is 8316
+The average of the map array on step 1800 id 197441.4556
+percolate: number of changes on step 1900 is 3799
+The average of the map array on step 1900 id 197575.5944
+percolate: number of changes on step 2000 is 2739
+The average of the map array on step 2000 id 197597.7812
+percolate: number of changes on step 2100 is 2228
+The average of the map array on step 2100 id 197599.1808
+percolate: number of changes on step 2200 is 2819
+The average of the map array on step 2200 id 197599.8657
+percolate: number of changes on step 2300 is 2051
+The average of the map array on step 2300 id 197600.4122
+percolate: number of changes on step 2400 is 2487
+The average of the map array on step 2400 id 197600.9383
+percolate: number of changes on step 2500 is 2258
+The average of the map array on step 2500 id 197601.4365
+percolate: number of changes on step 2600 is 1374
+The average of the map array on step 2600 id 197601.8636
+percolate: number of changes on step 2700 is 453
+The average of the map array on step 2700 id 197602.0578
+percolate: number of changes on step 2800 is 40
+The average of the map array on step 2800 id 197602.0971
+Percolate finish. There are no changes in the map array.
+percolate: cluster DOES NOT percolate
+percwrite: visualising the largest 8 clusters
+percwrite: cluster sizes are 167725, 19059, 18562, 14873, 10114, 6467, 5906, 5327
+percwrite: opening file <map288.pgm>
+percwrite: writing data ...
+percwrite: ... done
+percwrite: file closed
+0:
+Communicaiton time is 0.0097.
+Updating time is 11.6394.
+Iteration time is 12.4152.
+Runtime is 12.5308.
+percolate: rho = 0.411000, actual density = 0.410622
+percolate: number of changes on step 100 is 125804
+The average of the map array on step 100 id 147691.9104
+percolate: number of changes on step 200 is 93717
+The average of the map array on step 200 id 160338.2217
+percolate: number of changes on step 300 is 71689
+The average of the map array on step 300 id 168618.0435
+percolate: number of changes on step 400 is 60219
+The average of the map array on step 400 id 174094.7349
+percolate: number of changes on step 500 is 49992
+The average of the map array on step 500 id 179192.2711
+percolate: number of changes on step 600 is 38555
+The average of the map array on step 600 id 184018.6565
+percolate: number of changes on step 700 is 31247
+The average of the map array on step 700 id 188556.9105
+percolate: number of changes on step 800 is 28409
+The average of the map array on step 800 id 191665.1421
+percolate: number of changes on step 900 is 22618
+The average of the map array on step 900 id 193582.7995
+percolate: number of changes on step 1000 is 17244
+The average of the map array on step 1000 id 194360.2899
+percolate: number of changes on step 1100 is 15246
+The average of the map array on step 1100 id 194656.3279
+percolate: number of changes on step 1200 is 16590
+The average of the map array on step 1200 id 194917.9702
+percolate: number of changes on step 1300 is 16469
+The average of the map array on step 1300 id 195310.1363
+percolate: number of changes on step 1400 is 13822
+The average of the map array on step 1400 id 195767.3628
+percolate: number of changes on step 1500 is 13283
+The average of the map array on step 1500 id 196234.3992
+percolate: number of changes on step 1600 is 12664
+The average of the map array on step 1600 id 196698.2459
+percolate: number of changes on step 1700 is 11965
+The average of the map array on step 1700 id 197116.5850
+percolate: number of changes on step 1800 is 8316
+The average of the map array on step 1800 id 197441.4556
+percolate: number of changes on step 1900 is 3799
+The average of the map array on step 1900 id 197575.5944
+percolate: number of changes on step 2000 is 2739
+The average of the map array on step 2000 id 197597.7812
+percolate: number of changes on step 2100 is 2228
+The average of the map array on step 2100 id 197599.1808
+percolate: number of changes on step 2200 is 2819
+The average of the map array on step 2200 id 197599.8657
+percolate: number of changes on step 2300 is 2051
+The average of the map array on step 2300 id 197600.4122
+percolate: number of changes on step 2400 is 2487
+The average of the map array on step 2400 id 197600.9383
+percolate: number of changes on step 2500 is 2258
+The average of the map array on step 2500 id 197601.4365
+percolate: number of changes on step 2600 is 1374
+The average of the map array on step 2600 id 197601.8636
+percolate: number of changes on step 2700 is 453
+The average of the map array on step 2700 id 197602.0578
+percolate: number of changes on step 2800 is 40
+The average of the map array on step 2800 id 197602.0971
+Percolate finish. There are no changes in the map array.
+percolate: cluster DOES NOT percolate
+percwrite: visualising the largest 8 clusters
+percwrite: cluster sizes are 167725, 19059, 18562, 14873, 10114, 6467, 5906, 5327
+percwrite: opening file <map288.pgm>
+percwrite: writing data ...
+percwrite: ... done
+percwrite: file closed
+0:
+Communicaiton time is 0.0098.
+Updating time is 11.6465.
+Iteration time is 12.4222.
+Runtime is 12.5329.
+percolate: rho = 0.411000, actual density = 0.410622
+percolate: number of changes on step 100 is 125804
+The average of the map array on step 100 id 147691.9104
+percolate: number of changes on step 200 is 93717
+The average of the map array on step 200 id 160338.2217
+percolate: number of changes on step 300 is 71689
+The average of the map array on step 300 id 168618.0435
+percolate: number of changes on step 400 is 60219
+The average of the map array on step 400 id 174094.7349
+percolate: number of changes on step 500 is 49992
+The average of the map array on step 500 id 179192.2711
+percolate: number of changes on step 600 is 38555
+The average of the map array on step 600 id 184018.6565
+percolate: number of changes on step 700 is 31247
+The average of the map array on step 700 id 188556.9105
+percolate: number of changes on step 800 is 28409
+The average of the map array on step 800 id 191665.1421
+percolate: number of changes on step 900 is 22618
+The average of the map array on step 900 id 193582.7995
+percolate: number of changes on step 1000 is 17244
+The average of the map array on step 1000 id 194360.2899
+percolate: number of changes on step 1100 is 15246
+The average of the map array on step 1100 id 194656.3279
+percolate: number of changes on step 1200 is 16590
+The average of the map array on step 1200 id 194917.9702
+percolate: number of changes on step 1300 is 16469
+The average of the map array on step 1300 id 195310.1363
+percolate: number of changes on step 1400 is 13822
+The average of the map array on step 1400 id 195767.3628
+percolate: number of changes on step 1500 is 13283
+The average of the map array on step 1500 id 196234.3992
+percolate: number of changes on step 1600 is 12664
+The average of the map array on step 1600 id 196698.2459
+percolate: number of changes on step 1700 is 11965
+The average of the map array on step 1700 id 197116.5850
+percolate: number of changes on step 1800 is 8316
+The average of the map array on step 1800 id 197441.4556
+percolate: number of changes on step 1900 is 3799
+The average of the map array on step 1900 id 197575.5944
+percolate: number of changes on step 2000 is 2739
+The average of the map array on step 2000 id 197597.7812
+percolate: number of changes on step 2100 is 2228
+The average of the map array on step 2100 id 197599.1808
+percolate: number of changes on step 2200 is 2819
+The average of the map array on step 2200 id 197599.8657
+percolate: number of changes on step 2300 is 2051
+The average of the map array on step 2300 id 197600.4122
+percolate: number of changes on step 2400 is 2487
+The average of the map array on step 2400 id 197600.9383
+percolate: number of changes on step 2500 is 2258
+The average of the map array on step 2500 id 197601.4365
+percolate: number of changes on step 2600 is 1374
+The average of the map array on step 2600 id 197601.8636
+percolate: number of changes on step 2700 is 453
+The average of the map array on step 2700 id 197602.0578
+percolate: number of changes on step 2800 is 40
+The average of the map array on step 2800 id 197602.0971
+Percolate finish. There are no changes in the map array.
+percolate: cluster DOES NOT percolate
+percwrite: visualising the largest 8 clusters
+percwrite: cluster sizes are 167725, 19059, 18562, 14873, 10114, 6467, 5906, 5327
+percwrite: opening file <map288.pgm>
+percwrite: writing data ...
+percwrite: ... done
+percwrite: file closed
+0:
+Communicaiton time is 0.0097.
+Updating time is 11.6417.
+Iteration time is 12.4178.
+Runtime is 13.0252.
+percolate: rho = 0.411000, actual density = 0.410622
+percolate: number of changes on step 100 is 125804
+The average of the map array on step 100 id 147691.9104
+percolate: number of changes on step 200 is 93717
+The average of the map array on step 200 id 160338.2217
+percolate: number of changes on step 300 is 71689
+The average of the map array on step 300 id 168618.0435
+percolate: number of changes on step 400 is 60219
+The average of the map array on step 400 id 174094.7349
+percolate: number of changes on step 500 is 49992
+The average of the map array on step 500 id 179192.2711
+percolate: number of changes on step 600 is 38555
+The average of the map array on step 600 id 184018.6565
+percolate: number of changes on step 700 is 31247
+The average of the map array on step 700 id 188556.9105
+percolate: number of changes on step 800 is 28409
+The average of the map array on step 800 id 191665.1421
+percolate: number of changes on step 900 is 22618
+The average of the map array on step 900 id 193582.7995
+percolate: number of changes on step 1000 is 17244
+The average of the map array on step 1000 id 194360.2899
+percolate: number of changes on step 1100 is 15246
+The average of the map array on step 1100 id 194656.3279
+percolate: number of changes on step 1200 is 16590
+The average of the map array on step 1200 id 194917.9702
+percolate: number of changes on step 1300 is 16469
+The average of the map array on step 1300 id 195310.1363
+percolate: number of changes on step 1400 is 13822
+The average of the map array on step 1400 id 195767.3628
+percolate: number of changes on step 1500 is 13283
+The average of the map array on step 1500 id 196234.3992
+percolate: number of changes on step 1600 is 12664
+The average of the map array on step 1600 id 196698.2459
+percolate: number of changes on step 1700 is 11965
+The average of the map array on step 1700 id 197116.5850
+percolate: number of changes on step 1800 is 8316
+The average of the map array on step 1800 id 197441.4556
+percolate: number of changes on step 1900 is 3799
+The average of the map array on step 1900 id 197575.5944
+percolate: number of changes on step 2000 is 2739
+The average of the map array on step 2000 id 197597.7812
+percolate: number of changes on step 2100 is 2228
+The average of the map array on step 2100 id 197599.1808
+percolate: number of changes on step 2200 is 2819
+The average of the map array on step 2200 id 197599.8657
+percolate: number of changes on step 2300 is 2051
+The average of the map array on step 2300 id 197600.4122
+percolate: number of changes on step 2400 is 2487
+The average of the map array on step 2400 id 197600.9383
+percolate: number of changes on step 2500 is 2258
+The average of the map array on step 2500 id 197601.4365
+percolate: number of changes on step 2600 is 1374
+The average of the map array on step 2600 id 197601.8636
+percolate: number of changes on step 2700 is 453
+The average of the map array on step 2700 id 197602.0578
+percolate: number of changes on step 2800 is 40
+The average of the map array on step 2800 id 197602.0971
+Percolate finish. There are no changes in the map array.
+percolate: cluster DOES NOT percolate
+percwrite: visualising the largest 8 clusters
+percwrite: cluster sizes are 167725, 19059, 18562, 14873, 10114, 6467, 5906, 5327
+percwrite: opening file <map288.pgm>
+percwrite: writing data ...
+percwrite: ... done
+percwrite: file closed
+0:
+Communicaiton time is 0.0098.
+Updating time is 11.6451.
+Iteration time is 12.4237.
+Runtime is 12.6531.
+******************************This is processor 2 ***********************************\n
+percolate: rho = 0.411000, actual density = 0.410622
+percolate: number of changes on step 100 is 59574
+The average of the map array on step 100 id 147691.9104
+percolate: number of changes on step 100 is 66230
+percolate: number of changes on step 200 is 44457
+The average of the map array on step 200 id 160338.2217
+percolate: number of changes on step 200 is 49260
+percolate: number of changes on step 300 is 36584
+The average of the map array on step 300 id 168618.0435
+percolate: number of changes on step 300 is 35105
+percolate: number of changes on step 400 is 29436
+The average of the map array on step 400 id 174094.7349
+percolate: number of changes on step 400 is 30783
+percolate: number of changes on step 500 is 24003
+The average of the map array on step 500 id 179192.2711
+percolate: number of changes on step 500 is 25989
+percolate: number of changes on step 600 is 17593
+The average of the map array on step 600 id 184018.6565
+percolate: number of changes on step 600 is 20962
+percolate: number of changes on step 700 is 16974
+The average of the map array on step 700 id 188556.9105
+percolate: number of changes on step 700 is 14273
+percolate: number of changes on step 800 is 16347
+The average of the map array on step 800 id 191665.1421
+percolate: number of changes on step 800 is 12062
+percolate: number of changes on step 900 is 11129
+percolate: number of changes on step 900 is 11489
+The average of the map array on step 900 id 193582.7995
+percolate: number of changes on step 1000 is 7872
+The average of the map array on step 1000 id 194360.2899
+percolate: number of changes on step 1000 is 9372
+percolate: number of changes on step 1100 is 6308
+The average of the map array on step 1100 id 194656.3279
+percolate: number of changes on step 1100 is 8938
+percolate: number of changes on step 1200 is 6120
+The average of the map array on step 1200 id 194917.9702
+percolate: number of changes on step 1200 is 10470
+percolate: number of changes on step 1300 is 5538
+The average of the map array on step 1300 id 195310.1363
+percolate: number of changes on step 1300 is 10931
+percolate: number of changes on step 1400 is 3853
+The average of the map array on step 1400 id 195767.3628
+percolate: number of changes on step 1400 is 9969
+percolate: number of changes on step 1500 is 4816
+The average of the map array on step 1500 id 196234.3992
+percolate: number of changes on step 1500 is 8467
+percolate: number of changes on step 1600 is 6088
+The average of the map array on step 1600 id 196698.2459
+percolate: number of changes on step 1600 is 6576
+percolate: number of changes on step 1700 is 7318
+The average of the map array on step 1700 id 197116.5850
+percolate: number of changes on step 1700 is 4647
+percolate: number of changes on step 1800 is 6003
+The average of the map array on step 1800 id 197441.4556
+percolate: number of changes on step 1800 is 2313
+percolate: number of changes on step 1900 is 2765
+The average of the map array on step 1900 id 197575.5944
+percolate: number of changes on step 1900 is 1034
+percolate: number of changes on step 2000 is 998
+The average of the map array on step 2000 id 197597.7812
+percolate: number of changes on step 2000 is 1741
+percolate: number of changes on step 2100 is 443
+The average of the map array on step 2100 id 197599.1808
+percolate: number of changes on step 2100 is 1785
+percolate: number of changes on step 2200 is 513
+The average of the map array on step 2200 id 197599.8657
+percolate: number of changes on step 2200 is 2306
+percolate: number of changes on step 2300 is 712
+The average of the map array on step 2300 id 197600.4122
+percolate: number of changes on step 2300 is 1339
+percolate: number of changes on step 2400 is 1312
+The average of the map array on step 2400 id 197600.9383
+percolate: number of changes on step 2400 is 1175
+percolate: number of changes on step 2500 is 1831
+The average of the map array on step 2500 id 197601.4365
+percolate: number of changes on step 2500 is 427
+percolate: number of changes on step 2600 is 1238
+The average of the map array on step 2600 id 197601.8636
+percolate: number of changes on step 2600 is 136
+percolate: number of changes on step 2700 is 453
+The average of the map array on step 2700 id 197602.0578
+percolate: number of changes on step 2700 is 0
+percolate: number of changes on step 2800 is 40
+The average of the map array on step 2800 id 197602.0971
+percolate: number of changes on step 2800 is 0
+Percolate finish. There are no changes in the map array.
+percolate: cluster DOES NOT percolate
+percwrite: visualising the largest 8 clusters
+percwrite: cluster sizes are 167725, 19059, 18562, 14873, 10114, 6467, 5906, 5327
+percwrite: opening file <map288.pgm>
+percwrite: writing data ...
+percwrite: ... done
+percwrite: file closed
+0:
+Communicaiton time is 0.0130.
+Updating time is 5.8213.
+Iteration time is 6.2543.
+Runtime is 6.4173.
+1:
+Communicaiton time is 0.0113.
+Updating time is 5.8452.
+Iteration time is 6.2536.
+Runtime is 6.2753.
+percolate: rho = 0.411000, actual density = 0.410622
+percolate: number of changes on step 100 is 59574
+The average of the map array on step 100 id 147691.9104
+percolate: number of changes on step 100 is 66230
+percolate: number of changes on step 200 is 44457
+The average of the map array on step 200 id 160338.2217
+percolate: number of changes on step 200 is 49260
+percolate: number of changes on step 300 is 36584
+The average of the map array on step 300 id 168618.0435
+percolate: number of changes on step 300 is 35105
+percolate: number of changes on step 400 is 29436
+The average of the map array on step 400 id 174094.7349
+percolate: number of changes on step 400 is 30783
+percolate: number of changes on step 500 is 24003
+The average of the map array on step 500 id 179192.2711
+percolate: number of changes on step 500 is 25989
+percolate: number of changes on step 600 is 17593
+The average of the map array on step 600 id 184018.6565
+percolate: number of changes on step 600 is 20962
+percolate: number of changes on step 700 is 16974
+The average of the map array on step 700 id 188556.9105
+percolate: number of changes on step 700 is 14273
+percolate: number of changes on step 800 is 16347
+The average of the map array on step 800 id 191665.1421
+percolate: number of changes on step 800 is 12062
+percolate: number of changes on step 900 is 11489
+The average of the map array on step 900 id 193582.7995
+percolate: number of changes on step 900 is 11129
+percolate: number of changes on step 1000 is 7872
+The average of the map array on step 1000 id 194360.2899
+percolate: number of changes on step 1000 is 9372
+percolate: number of changes on step 1100 is 6308
+The average of the map array on step 1100 id 194656.3279
+percolate: number of changes on step 1100 is 8938
+percolate: number of changes on step 1200 is 6120
+The average of the map array on step 1200 id 194917.9702
+percolate: number of changes on step 1200 is 10470
+percolate: number of changes on step 1300 is 5538
+The average of the map array on step 1300 id 195310.1363
+percolate: number of changes on step 1300 is 10931
+percolate: number of changes on step 1400 is 3853
+The average of the map array on step 1400 id 195767.3628
+percolate: number of changes on step 1400 is 9969
+percolate: number of changes on step 1500 is 4816
+The average of the map array on step 1500 id 196234.3992
+percolate: number of changes on step 1500 is 8467
+percolate: number of changes on step 1600 is 6088
+The average of the map array on step 1600 id 196698.2459
+percolate: number of changes on step 1600 is 6576
+percolate: number of changes on step 1700 is 7318
+The average of the map array on step 1700 id 197116.5850
+percolate: number of changes on step 1700 is 4647
+percolate: number of changes on step 1800 is 6003
+The average of the map array on step 1800 id 197441.4556
+percolate: number of changes on step 1800 is 2313
+percolate: number of changes on step 1900 is 2765
+The average of the map array on step 1900 id 197575.5944
+percolate: number of changes on step 1900 is 1034
+percolate: number of changes on step 2000 is 998
+The average of the map array on step 2000 id 197597.7812
+percolate: number of changes on step 2000 is 1741
+percolate: number of changes on step 2100 is 443
+The average of the map array on step 2100 id 197599.1808
+percolate: number of changes on step 2100 is 1785
+percolate: number of changes on step 2200 is 513
+The average of the map array on step 2200 id 197599.8657
+percolate: number of changes on step 2200 is 2306
+percolate: number of changes on step 2300 is 712
+The average of the map array on step 2300 id 197600.4122
+percolate: number of changes on step 2300 is 1339
+percolate: number of changes on step 2400 is 1312
+The average of the map array on step 2400 id 197600.9383
+percolate: number of changes on step 2400 is 1175
+percolate: number of changes on step 2500 is 1831
+The average of the map array on step 2500 id 197601.4365
+percolate: number of changes on step 2500 is 427
+percolate: number of changes on step 2600 is 1238
+The average of the map array on step 2600 id 197601.8636
+percolate: number of changes on step 2600 is 136
+percolate: number of changes on step 2700 is 453
+The average of the map array on step 2700 id 197602.0578
+percolate: number of changes on step 2700 is 0
+percolate: number of changes on step 2800 is 40
+The average of the map array on step 2800 id 197602.0971
+percolate: number of changes on step 2800 is 0
+Percolate finish. There are no changes in the map array.
+percolate: cluster DOES NOT percolate
+percwrite: visualising the largest 8 clusters
+percwrite: cluster sizes are 167725, 19059, 18562, 14873, 10114, 6467, 5906, 5327
+percwrite: opening file <map288.pgm>
+percwrite: writing data ...
+percwrite: ... done
+percwrite: file closed
+0:
+Communicaiton time is 0.0114.
+Updating time is 5.8290.
+Iteration time is 6.2430.
+Runtime is 6.3665.
+1:
+Communicaiton time is 0.0112.
+Updating time is 5.8380.
+Iteration time is 6.2429.
+Runtime is 6.2737.
+percolate: rho = 0.411000, actual density = 0.410622
+percolate: number of changes on step 100 is 59574
+The average of the map array on step 100 id 147691.9104
+percolate: number of changes on step 100 is 66230
+percolate: number of changes on step 200 is 44457
+The average of the map array on step 200 id 160338.2217
+percolate: number of changes on step 200 is 49260
+percolate: number of changes on step 300 is 36584
+The average of the map array on step 300 id 168618.0435
+percolate: number of changes on step 300 is 35105
+percolate: number of changes on step 400 is 29436
+The average of the map array on step 400 id 174094.7349
+percolate: number of changes on step 400 is 30783
+percolate: number of changes on step 500 is 24003
+The average of the map array on step 500 id 179192.2711
+percolate: number of changes on step 500 is 25989
+percolate: number of changes on step 600 is 17593
+The average of the map array on step 600 id 184018.6565
+percolate: number of changes on step 600 is 20962
+percolate: number of changes on step 700 is 16974
+The average of the map array on step 700 id 188556.9105
+percolate: number of changes on step 700 is 14273
+percolate: number of changes on step 800 is 16347
+The average of the map array on step 800 id 191665.1421
+percolate: number of changes on step 800 is 12062
+percolate: number of changes on step 900 is 11489
+The average of the map array on step 900 id 193582.7995
+percolate: number of changes on step 900 is 11129
+percolate: number of changes on step 1000 is 7872
+The average of the map array on step 1000 id 194360.2899
+percolate: number of changes on step 1000 is 9372
+percolate: number of changes on step 1100 is 6308
+The average of the map array on step 1100 id 194656.3279
+percolate: number of changes on step 1100 is 8938
+percolate: number of changes on step 1200 is 6120
+The average of the map array on step 1200 id 194917.9702
+percolate: number of changes on step 1200 is 10470
+percolate: number of changes on step 1300 is 5538
+The average of the map array on step 1300 id 195310.1363
+percolate: number of changes on step 1300 is 10931
+percolate: number of changes on step 1400 is 3853
+The average of the map array on step 1400 id 195767.3628
+percolate: number of changes on step 1400 is 9969
+percolate: number of changes on step 1500 is 8467
+percolate: number of changes on step 1500 is 4816
+The average of the map array on step 1500 id 196234.3992
+percolate: number of changes on step 1600 is 6088
+The average of the map array on step 1600 id 196698.2459
+percolate: number of changes on step 1600 is 6576
+percolate: number of changes on step 1700 is 7318
+The average of the map array on step 1700 id 197116.5850
+percolate: number of changes on step 1700 is 4647
+percolate: number of changes on step 1800 is 6003
+The average of the map array on step 1800 id 197441.4556
+percolate: number of changes on step 1800 is 2313
+percolate: number of changes on step 1900 is 2765
+The average of the map array on step 1900 id 197575.5944
+percolate: number of changes on step 1900 is 1034
+percolate: number of changes on step 2000 is 998
+The average of the map array on step 2000 id 197597.7812
+percolate: number of changes on step 2000 is 1741
+percolate: number of changes on step 2100 is 443
+The average of the map array on step 2100 id 197599.1808
+percolate: number of changes on step 2100 is 1785
+percolate: number of changes on step 2200 is 513
+The average of the map array on step 2200 id 197599.8657
+percolate: number of changes on step 2200 is 2306
+percolate: number of changes on step 2300 is 712
+The average of the map array on step 2300 id 197600.4122
+percolate: number of changes on step 2300 is 1339
+percolate: number of changes on step 2400 is 1312
+The average of the map array on step 2400 id 197600.9383
+percolate: number of changes on step 2400 is 1175
+percolate: number of changes on step 2500 is 1831
+The average of the map array on step 2500 id 197601.4365
+percolate: number of changes on step 2500 is 427
+percolate: number of changes on step 2600 is 1238
+The average of the map array on step 2600 id 197601.8636
+percolate: number of changes on step 2600 is 136
+percolate: number of changes on step 2700 is 453
+The average of the map array on step 2700 id 197602.0578
+percolate: number of changes on step 2700 is 0
+percolate: number of changes on step 2800 is 40
+The average of the map array on step 2800 id 197602.0971
+percolate: number of changes on step 2800 is 0
+Percolate finish. There are no changes in the map array.
+percolate: cluster DOES NOT percolate
+percwrite: visualising the largest 8 clusters
+percwrite: cluster sizes are 167725, 19059, 18562, 14873, 10114, 6467, 5906, 5327
+percwrite: opening file <map288.pgm>
+percwrite: writing data ...
+percwrite: ... done
+percwrite: file closed
+0:
+Communicaiton time is 0.0125.
+Updating time is 5.8189.
+Iteration time is 6.2490.
+Runtime is 6.4123.
+1:
+Communicaiton time is 0.0111.
+Updating time is 5.8428.
+Iteration time is 6.2483.
+Runtime is 6.2702.
+percolate: rho = 0.411000, actual density = 0.410622
+percolate: number of changes on step 100 is 59574
+The average of the map array on step 100 id 147691.9104
+percolate: number of changes on step 100 is 66230
+percolate: number of changes on step 200 is 44457
+The average of the map array on step 200 id 160338.2217
+percolate: number of changes on step 200 is 49260
+percolate: number of changes on step 300 is 36584
+The average of the map array on step 300 id 168618.0435
+percolate: number of changes on step 300 is 35105
+percolate: number of changes on step 400 is 29436
+The average of the map array on step 400 id 174094.7349
+percolate: number of changes on step 400 is 30783
+percolate: number of changes on step 500 is 24003
+The average of the map array on step 500 id 179192.2711
+percolate: number of changes on step 500 is 25989
+percolate: number of changes on step 600 is 17593
+The average of the map array on step 600 id 184018.6565
+percolate: number of changes on step 600 is 20962
+percolate: number of changes on step 700 is 16974
+The average of the map array on step 700 id 188556.9105
+percolate: number of changes on step 700 is 14273
+percolate: number of changes on step 800 is 16347
+The average of the map array on step 800 id 191665.1421
+percolate: number of changes on step 800 is 12062
+percolate: number of changes on step 900 is 11489
+The average of the map array on step 900 id 193582.7995
+percolate: number of changes on step 900 is 11129
+percolate: number of changes on step 1000 is 7872
+The average of the map array on step 1000 id 194360.2899
+percolate: number of changes on step 1000 is 9372
+percolate: number of changes on step 1100 is 6308
+The average of the map array on step 1100 id 194656.3279
+percolate: number of changes on step 1100 is 8938
+percolate: number of changes on step 1200 is 6120
+The average of the map array on step 1200 id 194917.9702
+percolate: number of changes on step 1200 is 10470
+percolate: number of changes on step 1300 is 5538
+percolate: number of changes on step 1300 is 10931
+The average of the map array on step 1300 id 195310.1363
+percolate: number of changes on step 1400 is 3853
+The average of the map array on step 1400 id 195767.3628
+percolate: number of changes on step 1400 is 9969
+percolate: number of changes on step 1500 is 4816
+The average of the map array on step 1500 id 196234.3992
+percolate: number of changes on step 1500 is 8467
+percolate: number of changes on step 1600 is 6088
+The average of the map array on step 1600 id 196698.2459
+percolate: number of changes on step 1600 is 6576
+percolate: number of changes on step 1700 is 4647
+percolate: number of changes on step 1700 is 7318
+The average of the map array on step 1700 id 197116.5850
+percolate: number of changes on step 1800 is 6003
+The average of the map array on step 1800 id 197441.4556
+percolate: number of changes on step 1800 is 2313
+percolate: number of changes on step 1900 is 2765
+The average of the map array on step 1900 id 197575.5944
+percolate: number of changes on step 1900 is 1034
+percolate: number of changes on step 2000 is 998
+The average of the map array on step 2000 id 197597.7812
+percolate: number of changes on step 2000 is 1741
+percolate: number of changes on step 2100 is 443
+The average of the map array on step 2100 id 197599.1808
+percolate: number of changes on step 2100 is 1785
+percolate: number of changes on step 2200 is 513
+The average of the map array on step 2200 id 197599.8657
+percolate: number of changes on step 2200 is 2306
+percolate: number of changes on step 2300 is 712
+The average of the map array on step 2300 id 197600.4122
+percolate: number of changes on step 2300 is 1339
+percolate: number of changes on step 2400 is 1312
+The average of the map array on step 2400 id 197600.9383
+percolate: number of changes on step 2400 is 1175
+percolate: number of changes on step 2500 is 1831
+The average of the map array on step 2500 id 197601.4365
+percolate: number of changes on step 2500 is 427
+percolate: number of changes on step 2600 is 1238
+The average of the map array on step 2600 id 197601.8636
+percolate: number of changes on step 2600 is 136
+percolate: number of changes on step 2700 is 453
+The average of the map array on step 2700 id 197602.0578
+percolate: number of changes on step 2700 is 0
+percolate: number of changes on step 2800 is 40
+The average of the map array on step 2800 id 197602.0971
+percolate: number of changes on step 2800 is 0
+Percolate finish. There are no changes in the map array.
+percolate: cluster DOES NOT percolate
+percwrite: visualising the largest 8 clusters
+percwrite: cluster sizes are 167725, 19059, 18562, 14873, 10114, 6467, 5906, 5327
+percwrite: opening file <map288.pgm>
+percwrite: writing data ...
+percwrite: ... done
+percwrite: file closed
+0:
+Communicaiton time is 0.0115.
+Updating time is 5.8321.
+Iteration time is 6.2507.
+Runtime is 6.4230.
+1:
+Communicaiton time is 0.0115.
+Updating time is 5.8416.
+Iteration time is 6.2505.
+Runtime is 6.2812.
+percolate: rho = 0.411000, actual density = 0.410622
+percolate: number of changes on step 100 is 59574
+The average of the map array on step 100 id 147691.9104
+percolate: number of changes on step 100 is 66230
+percolate: number of changes on step 200 is 44457
+The average of the map array on step 200 id 160338.2217
+percolate: number of changes on step 200 is 49260
+percolate: number of changes on step 300 is 36584
+The average of the map array on step 300 id 168618.0435
+percolate: number of changes on step 300 is 35105
+percolate: number of changes on step 400 is 29436
+The average of the map array on step 400 id 174094.7349
+percolate: number of changes on step 400 is 30783
+percolate: number of changes on step 500 is 24003
+The average of the map array on step 500 id 179192.2711
+percolate: number of changes on step 500 is 25989
+percolate: number of changes on step 600 is 17593
+The average of the map array on step 600 id 184018.6565
+percolate: number of changes on step 600 is 20962
+percolate: number of changes on step 700 is 16974
+The average of the map array on step 700 id 188556.9105
+percolate: number of changes on step 700 is 14273
+percolate: number of changes on step 800 is 16347
+The average of the map array on step 800 id 191665.1421
+percolate: number of changes on step 800 is 12062
+percolate: number of changes on step 900 is 11489
+The average of the map array on step 900 id 193582.7995
+percolate: number of changes on step 900 is 11129
+percolate: number of changes on step 1000 is 7872
+The average of the map array on step 1000 id 194360.2899
+percolate: number of changes on step 1000 is 9372
+percolate: number of changes on step 1100 is 8938
+percolate: number of changes on step 1100 is 6308
+The average of the map array on step 1100 id 194656.3279
+percolate: number of changes on step 1200 is 6120
+The average of the map array on step 1200 id 194917.9702
+percolate: number of changes on step 1200 is 10470
+percolate: number of changes on step 1300 is 5538
+The average of the map array on step 1300 id 195310.1363
+percolate: number of changes on step 1300 is 10931
+percolate: number of changes on step 1400 is 3853
+The average of the map array on step 1400 id 195767.3628
+percolate: number of changes on step 1400 is 9969
+percolate: number of changes on step 1500 is 4816
+The average of the map array on step 1500 id 196234.3992
+percolate: number of changes on step 1500 is 8467
+percolate: number of changes on step 1600 is 6088
+The average of the map array on step 1600 id 196698.2459
+percolate: number of changes on step 1600 is 6576
+percolate: number of changes on step 1700 is 7318
+The average of the map array on step 1700 id 197116.5850
+percolate: number of changes on step 1700 is 4647
+percolate: number of changes on step 1800 is 6003
+The average of the map array on step 1800 id 197441.4556
+percolate: number of changes on step 1800 is 2313
+percolate: number of changes on step 1900 is 2765
+The average of the map array on step 1900 id 197575.5944
+percolate: number of changes on step 1900 is 1034
+percolate: number of changes on step 2000 is 998
+The average of the map array on step 2000 id 197597.7812
+percolate: number of changes on step 2000 is 1741
+percolate: number of changes on step 2100 is 443
+The average of the map array on step 2100 id 197599.1808
+percolate: number of changes on step 2100 is 1785
+percolate: number of changes on step 2200 is 513
+The average of the map array on step 2200 id 197599.8657
+percolate: number of changes on step 2200 is 2306
+percolate: number of changes on step 2300 is 1339
+percolate: number of changes on step 2300 is 712
+The average of the map array on step 2300 id 197600.4122
+percolate: number of changes on step 2400 is 1312
+The average of the map array on step 2400 id 197600.9383
+percolate: number of changes on step 2400 is 1175
+percolate: number of changes on step 2500 is 1831
+The average of the map array on step 2500 id 197601.4365
+percolate: number of changes on step 2500 is 427
+percolate: number of changes on step 2600 is 1238
+The average of the map array on step 2600 id 197601.8636
+percolate: number of changes on step 2600 is 136
+percolate: number of changes on step 2700 is 453
+The average of the map array on step 2700 id 197602.0578
+percolate: number of changes on step 2700 is 0
+percolate: number of changes on step 2800 is 40
+The average of the map array on step 2800 id 197602.0971
+percolate: number of changes on step 2800 is 0
+Percolate finish. There are no changes in the map array.
+percolate: cluster DOES NOT percolate
+percwrite: visualising the largest 8 clusters
+percwrite: cluster sizes are 167725, 19059, 18562, 14873, 10114, 6467, 5906, 5327
+percwrite: opening file <map288.pgm>
+percwrite: writing data ...
+percwrite: ... done
+percwrite: file closed
+0:
+Communicaiton time is 0.0123.
+Updating time is 5.8196.
+Iteration time is 6.2453.
+Runtime is 6.3590.
+1:
+Communicaiton time is 0.0113.
+Updating time is 5.8390.
+Iteration time is 6.2447.
+Runtime is 6.2666.
+******************************This is processor 3 ***********************************\n
+percolate: rho = 0.411000, actual density = 0.410622
+percolate: number of changes on step 100 is 37380
+The average of the map array on step 100 id 147691.9104
+percolate: number of changes on step 100 is 47635
+percolate: number of changes on step 100 is 40789
+percolate: number of changes on step 200 is 23076
+The average of the map array on step 200 id 160338.2217
+percolate: number of changes on step 200 is 44571
+percolate: number of changes on step 200 is 26070
+percolate: number of changes on step 300 is 18569
+The average of the map array on step 300 id 168618.0435
+percolate: number of changes on step 300 is 37528
+percolate: number of changes on step 300 is 15592
+percolate: number of changes on step 400 is 14959
+The average of the map array on step 400 id 174094.7349
+percolate: number of changes on step 400 is 33953
+percolate: number of changes on step 400 is 11307
+percolate: number of changes on step 500 is 12918
+The average of the map array on step 500 id 179192.2711
+percolate: number of changes on step 500 is 29765
+percolate: number of changes on step 500 is 7309
+percolate: number of changes on step 600 is 9287
+The average of the map array on step 600 id 184018.6565
+percolate: number of changes on step 600 is 24121
+percolate: number of changes on step 600 is 5147
+percolate: number of changes on step 700 is 6514
+The average of the map array on step 700 id 188556.9105
+percolate: number of changes on step 700 is 20175
+percolate: number of changes on step 700 is 4558
+percolate: number of changes on step 800 is 5348
+The average of the map array on step 800 id 191665.1421
+percolate: number of changes on step 800 is 19951
+percolate: number of changes on step 800 is 3110
+percolate: number of changes on step 900 is 3867
+The average of the map array on step 900 id 193582.7995
+percolate: number of changes on step 900 is 15011
+percolate: number of changes on step 900 is 3740
+percolate: number of changes on step 1000 is 4154
+The average of the map array on step 1000 id 194360.2899
+percolate: number of changes on step 1000 is 8664
+percolate: number of changes on step 1000 is 4426
+percolate: number of changes on step 1100 is 3894
+The average of the map array on step 1100 id 194656.3279
+percolate: number of changes on step 1100 is 6541
+percolate: number of changes on step 1100 is 4811
+percolate: number of changes on step 1200 is 3785
+The average of the map array on step 1200 id 194917.9702
+percolate: number of changes on step 1200 is 7432
+percolate: number of changes on step 1200 is 5373
+percolate: number of changes on step 1300 is 2210
+The average of the map array on step 1300 id 195310.1363
+percolate: number of changes on step 1300 is 9514
+percolate: number of changes on step 1300 is 4745
+percolate: number of changes on step 1400 is 538
+The average of the map array on step 1400 id 195767.3628
+percolate: number of changes on step 1400 is 10598
+percolate: number of changes on step 1400 is 2686
+percolate: number of changes on step 1500 is 81
+The average of the map array on step 1500 id 196234.3992
+percolate: number of changes on step 1500 is 12296
+percolate: number of changes on step 1500 is 906
+percolate: number of changes on step 1600 is 48
+The average of the map array on step 1600 id 196698.2459
+percolate: number of changes on step 1600 is 12432
+percolate: number of changes on step 1600 is 184
+percolate: number of changes on step 1700 is 176
+The average of the map array on step 1700 id 197116.5850
+percolate: number of changes on step 1700 is 11673
+percolate: number of changes on step 1700 is 116
+percolate: number of changes on step 1800 is 190
+The average of the map array on step 1800 id 197441.4556
+percolate: number of changes on step 1800 is 8126
+percolate: number of changes on step 1800 is 0
+percolate: number of changes on step 1900 is 100
+The average of the map array on step 1900 id 197575.5944
+percolate: number of changes on step 1900 is 3468
+percolate: number of changes on step 1900 is 231
+percolate: number of changes on step 2000 is 53
+The average of the map array on step 2000 id 197597.7812
+percolate: number of changes on step 2000 is 2113
+percolate: number of changes on step 2000 is 573
+percolate: number of changes on step 2100 is 20
+The average of the map array on step 2100 id 197599.1808
+percolate: number of changes on step 2100 is 1553
+percolate: number of changes on step 2100 is 655
+percolate: number of changes on step 2200 is 2443
+percolate: number of changes on step 2200 is 376
+percolate: number of changes on step 2200 is 0
+The average of the map array on step 2200 id 197599.8657
+percolate: number of changes on step 2300 is 0
+The average of the map array on step 2300 id 197600.4122
+percolate: number of changes on step 2300 is 2003
+percolate: number of changes on step 2300 is 48
+percolate: number of changes on step 2400 is 0
+The average of the map array on step 2400 id 197600.9383
+percolate: number of changes on step 2400 is 2487
+percolate: number of changes on step 2400 is 0
+percolate: number of changes on step 2500 is 32
+The average of the map array on step 2500 id 197601.4365
+percolate: number of changes on step 2500 is 2226
+percolate: number of changes on step 2500 is 0
+percolate: number of changes on step 2600 is 26
+The average of the map array on step 2600 id 197601.8636
+percolate: number of changes on step 2600 is 1348
+percolate: number of changes on step 2600 is 0
+percolate: number of changes on step 2700 is 66
+The average of the map array on step 2700 id 197602.0578
+percolate: number of changes on step 2700 is 387
+percolate: number of changes on step 2700 is 0
+percolate: number of changes on step 2800 is 0
+The average of the map array on step 2800 id 197602.0971
+percolate: number of changes on step 2800 is 40
+percolate: number of changes on step 2800 is 0
+Percolate finish. There are no changes in the map array.
+percolate: cluster DOES NOT percolate
+percwrite: visualising the largest 8 clusters
+percwrite: cluster sizes are 167725, 19059, 18562, 14873, 10114, 6467, 5906, 5327
+percwrite: opening file <map288.pgm>
+percwrite: writing data ...
+percwrite: ... done
+percwrite: file closed
+0:
+Communicaiton time is 0.0124.
+Updating time is 3.8780.
+Iteration time is 4.1803.
+Runtime is 4.3484.
+1:
+Communicaiton time is 0.0111.
+Updating time is 3.8994.
+Iteration time is 4.1799.
+Runtime is 4.2031.
+2:
+Communicaiton time is 0.0185.
+Updating time is 3.8892.
+Iteration time is 4.1800.
+Runtime is 4.2031.
+percolate: rho = 0.411000, actual density = 0.410622
+percolate: number of changes on step 100 is 37380
+The average of the map array on step 100 id 147691.9104
+percolate: number of changes on step 100 is 47635
+percolate: number of changes on step 100 is 40789
+percolate: number of changes on step 200 is 23076
+The average of the map array on step 200 id 160338.2217
+percolate: number of changes on step 200 is 44571
+percolate: number of changes on step 200 is 26070
+percolate: number of changes on step 300 is 18569
+The average of the map array on step 300 id 168618.0435
+percolate: number of changes on step 300 is 37528
+percolate: number of changes on step 300 is 15592
+percolate: number of changes on step 400 is 14959
+The average of the map array on step 400 id 174094.7349
+percolate: number of changes on step 400 is 33953
+percolate: number of changes on step 400 is 11307
+percolate: number of changes on step 500 is 12918
+The average of the map array on step 500 id 179192.2711
+percolate: number of changes on step 500 is 29765
+percolate: number of changes on step 500 is 7309
+percolate: number of changes on step 600 is 9287
+The average of the map array on step 600 id 184018.6565
+percolate: number of changes on step 600 is 24121
+percolate: number of changes on step 600 is 5147
+percolate: number of changes on step 700 is 4558
+percolate: number of changes on step 700 is 6514
+The average of the map array on step 700 id 188556.9105
+percolate: number of changes on step 700 is 20175
+percolate: number of changes on step 800 is 5348
+The average of the map array on step 800 id 191665.1421
+percolate: number of changes on step 800 is 19951
+percolate: number of changes on step 800 is 3110
+percolate: number of changes on step 900 is 3867
+The average of the map array on step 900 id 193582.7995
+percolate: number of changes on step 900 is 15011
+percolate: number of changes on step 900 is 3740
+percolate: number of changes on step 1000 is 4154
+The average of the map array on step 1000 id 194360.2899
+percolate: number of changes on step 1000 is 8664
+percolate: number of changes on step 1000 is 4426
+percolate: number of changes on step 1100 is 3894
+The average of the map array on step 1100 id 194656.3279
+percolate: number of changes on step 1100 is 6541
+percolate: number of changes on step 1100 is 4811
+percolate: number of changes on step 1200 is 3785
+The average of the map array on step 1200 id 194917.9702
+percolate: number of changes on step 1200 is 7432
+percolate: number of changes on step 1200 is 5373
+percolate: number of changes on step 1300 is 2210
+The average of the map array on step 1300 id 195310.1363
+percolate: number of changes on step 1300 is 9514
+percolate: number of changes on step 1300 is 4745
+percolate: number of changes on step 1400 is 538
+The average of the map array on step 1400 id 195767.3628
+percolate: number of changes on step 1400 is 10598
+percolate: number of changes on step 1400 is 2686
+percolate: number of changes on step 1500 is 81
+The average of the map array on step 1500 id 196234.3992
+percolate: number of changes on step 1500 is 12296
+percolate: number of changes on step 1500 is 906
+percolate: number of changes on step 1600 is 48
+The average of the map array on step 1600 id 196698.2459
+percolate: number of changes on step 1600 is 12432
+percolate: number of changes on step 1600 is 184
+percolate: number of changes on step 1700 is 176
+The average of the map array on step 1700 id 197116.5850
+percolate: number of changes on step 1700 is 11673
+percolate: number of changes on step 1700 is 116
+percolate: number of changes on step 1800 is 190
+The average of the map array on step 1800 id 197441.4556
+percolate: number of changes on step 1800 is 8126
+percolate: number of changes on step 1800 is 0
+percolate: number of changes on step 1900 is 100
+The average of the map array on step 1900 id 197575.5944
+percolate: number of changes on step 1900 is 3468
+percolate: number of changes on step 1900 is 231
+percolate: number of changes on step 2000 is 53
+The average of the map array on step 2000 id 197597.7812
+percolate: number of changes on step 2000 is 2113
+percolate: number of changes on step 2000 is 573
+percolate: number of changes on step 2100 is 20
+The average of the map array on step 2100 id 197599.1808
+percolate: number of changes on step 2100 is 1553
+percolate: number of changes on step 2100 is 655
+percolate: number of changes on step 2200 is 0
+The average of the map array on step 2200 id 197599.8657
+percolate: number of changes on step 2200 is 2443
+percolate: number of changes on step 2200 is 376
+percolate: number of changes on step 2300 is 0
+The average of the map array on step 2300 id 197600.4122
+percolate: number of changes on step 2300 is 2003
+percolate: number of changes on step 2300 is 48
+percolate: number of changes on step 2400 is 0
+The average of the map array on step 2400 id 197600.9383
+percolate: number of changes on step 2400 is 2487
+percolate: number of changes on step 2400 is 0
+percolate: number of changes on step 2500 is 32
+The average of the map array on step 2500 id 197601.4365
+percolate: number of changes on step 2500 is 2226
+percolate: number of changes on step 2500 is 0
+percolate: number of changes on step 2600 is 26
+The average of the map array on step 2600 id 197601.8636
+percolate: number of changes on step 2600 is 1348
+percolate: number of changes on step 2600 is 0
+percolate: number of changes on step 2700 is 387
+percolate: number of changes on step 2700 is 0
+percolate: number of changes on step 2700 is 66
+The average of the map array on step 2700 id 197602.0578
+percolate: number of changes on step 2800 is 0
+The average of the map array on step 2800 id 197602.0971
+percolate: number of changes on step 2800 is 40
+percolate: number of changes on step 2800 is 0
+Percolate finish. There are no changes in the map array.
+percolate: cluster DOES NOT percolate
+percwrite: visualising the largest 8 clusters
+percwrite: cluster sizes are 167725, 19059, 18562, 14873, 10114, 6467, 5906, 5327
+percwrite: opening file <map288.pgm>
+percwrite: writing data ...
+percwrite: ... done
+percwrite: file closed
+0:
+Communicaiton time is 0.0130.
+Updating time is 3.8765.
+Iteration time is 4.1868.
+Runtime is 4.3028.
+1:
+Communicaiton time is 0.0112.
+Updating time is 3.9064.
+Iteration time is 4.1863.
+Runtime is 4.2101.
+2:
+Communicaiton time is 0.0175.
+Updating time is 3.8990.
+Iteration time is 4.1864.
+Runtime is 4.2101.
+percolate: rho = 0.411000, actual density = 0.410622
+percolate: number of changes on step 100 is 37380
+The average of the map array on step 100 id 147691.9104
+percolate: number of changes on step 100 is 47635
+percolate: number of changes on step 100 is 40789
+percolate: number of changes on step 200 is 23076
+The average of the map array on step 200 id 160338.2217
+percolate: number of changes on step 200 is 44571
+percolate: number of changes on step 200 is 26070
+percolate: number of changes on step 300 is 18569
+The average of the map array on step 300 id 168618.0435
+percolate: number of changes on step 300 is 37528
+percolate: number of changes on step 300 is 15592
+percolate: number of changes on step 400 is 14959
+The average of the map array on step 400 id 174094.7349
+percolate: number of changes on step 400 is 33953
+percolate: number of changes on step 400 is 11307
+percolate: number of changes on step 500 is 12918
+The average of the map array on step 500 id 179192.2711
+percolate: number of changes on step 500 is 29765
+percolate: number of changes on step 500 is 7309
+percolate: number of changes on step 600 is 9287
+The average of the map array on step 600 id 184018.6565
+percolate: number of changes on step 600 is 24121
+percolate: number of changes on step 600 is 5147
+percolate: number of changes on step 700 is 6514
+The average of the map array on step 700 id 188556.9105
+percolate: number of changes on step 700 is 20175
+percolate: number of changes on step 700 is 4558
+percolate: number of changes on step 800 is 5348
+The average of the map array on step 800 id 191665.1421
+percolate: number of changes on step 800 is 19951
+percolate: number of changes on step 800 is 3110
+percolate: number of changes on step 900 is 3867
+The average of the map array on step 900 id 193582.7995
+percolate: number of changes on step 900 is 15011
+percolate: number of changes on step 900 is 3740
+percolate: number of changes on step 1000 is 4154
+The average of the map array on step 1000 id 194360.2899
+percolate: number of changes on step 1000 is 8664
+percolate: number of changes on step 1000 is 4426
+percolate: number of changes on step 1100 is 3894
+The average of the map array on step 1100 id 194656.3279
+percolate: number of changes on step 1100 is 6541
+percolate: number of changes on step 1100 is 4811
+percolate: number of changes on step 1200 is 3785
+The average of the map array on step 1200 id 194917.9702
+percolate: number of changes on step 1200 is 7432
+percolate: number of changes on step 1200 is 5373
+percolate: number of changes on step 1300 is 2210
+The average of the map array on step 1300 id 195310.1363
+percolate: number of changes on step 1300 is 9514
+percolate: number of changes on step 1300 is 4745
+percolate: number of changes on step 1400 is 538
+The average of the map array on step 1400 id 195767.3628
+percolate: number of changes on step 1400 is 10598
+percolate: number of changes on step 1400 is 2686
+percolate: number of changes on step 1500 is 81
+The average of the map array on step 1500 id 196234.3992
+percolate: number of changes on step 1500 is 12296
+percolate: number of changes on step 1500 is 906
+percolate: number of changes on step 1600 is 48
+The average of the map array on step 1600 id 196698.2459
+percolate: number of changes on step 1600 is 12432
+percolate: number of changes on step 1600 is 184
+percolate: number of changes on step 1700 is 176
+The average of the map array on step 1700 id 197116.5850
+percolate: number of changes on step 1700 is 11673
+percolate: number of changes on step 1700 is 116
+percolate: number of changes on step 1800 is 190
+The average of the map array on step 1800 id 197441.4556
+percolate: number of changes on step 1800 is 8126
+percolate: number of changes on step 1800 is 0
+percolate: number of changes on step 1900 is 100
+The average of the map array on step 1900 id 197575.5944
+percolate: number of changes on step 1900 is 3468
+percolate: number of changes on step 1900 is 231
+percolate: number of changes on step 2000 is 53
+The average of the map array on step 2000 id 197597.7812
+percolate: number of changes on step 2000 is 2113
+percolate: number of changes on step 2000 is 573
+percolate: number of changes on step 2100 is 1553
+percolate: number of changes on step 2100 is 655
+percolate: number of changes on step 2100 is 20
+The average of the map array on step 2100 id 197599.1808
+percolate: number of changes on step 2200 is 0
+The average of the map array on step 2200 id 197599.8657
+percolate: number of changes on step 2200 is 2443
+percolate: number of changes on step 2200 is 376
+percolate: number of changes on step 2300 is 0
+The average of the map array on step 2300 id 197600.4122
+percolate: number of changes on step 2300 is 2003
+percolate: number of changes on step 2300 is 48
+percolate: number of changes on step 2400 is 0
+The average of the map array on step 2400 id 197600.9383
+percolate: number of changes on step 2400 is 2487
+percolate: number of changes on step 2400 is 0
+percolate: number of changes on step 2500 is 32
+The average of the map array on step 2500 id 197601.4365
+percolate: number of changes on step 2500 is 2226
+percolate: number of changes on step 2500 is 0
+percolate: number of changes on step 2600 is 26
+The average of the map array on step 2600 id 197601.8636
+percolate: number of changes on step 2600 is 1348
+percolate: number of changes on step 2600 is 0
+percolate: number of changes on step 2700 is 66
+The average of the map array on step 2700 id 197602.0578
+percolate: number of changes on step 2700 is 387
+percolate: number of changes on step 2700 is 0
+percolate: number of changes on step 2800 is 0
+The average of the map array on step 2800 id 197602.0971
+percolate: number of changes on step 2800 is 40
+percolate: number of changes on step 2800 is 0
+Percolate finish. There are no changes in the map array.
+percolate: cluster DOES NOT percolate
+percwrite: visualising the largest 8 clusters
+percwrite: cluster sizes are 167725, 19059, 18562, 14873, 10114, 6467, 5906, 5327
+percwrite: opening file <map288.pgm>
+percwrite: writing data ...
+percwrite: ... done
+percwrite: file closed
+0:
+Communicaiton time is 0.0120.
+Updating time is 3.8849.
+Iteration time is 4.1877.
+Runtime is 4.3647.
+1:
+Communicaiton time is 0.0113.
+Updating time is 3.9072.
+Iteration time is 4.1876.
+Runtime is 4.2224.
+2:
+Communicaiton time is 0.0171.
+Updating time is 3.9037.
+Iteration time is 4.1876.
+Runtime is 4.2224.
+percolate: rho = 0.411000, actual density = 0.410622
+percolate: number of changes on step 100 is 37380
+The average of the map array on step 100 id 147691.9104
+percolate: number of changes on step 100 is 47635
+percolate: number of changes on step 100 is 40789
+percolate: number of changes on step 200 is 23076
+The average of the map array on step 200 id 160338.2217
+percolate: number of changes on step 200 is 44571
+percolate: number of changes on step 200 is 26070
+percolate: number of changes on step 300 is 18569
+The average of the map array on step 300 id 168618.0435
+percolate: number of changes on step 300 is 37528
+percolate: number of changes on step 300 is 15592
+percolate: number of changes on step 400 is 14959
+The average of the map array on step 400 id 174094.7349
+percolate: number of changes on step 400 is 33953
+percolate: number of changes on step 400 is 11307
+percolate: number of changes on step 500 is 12918
+The average of the map array on step 500 id 179192.2711
+percolate: number of changes on step 500 is 29765
+percolate: number of changes on step 500 is 7309
+percolate: number of changes on step 600 is 9287
+The average of the map array on step 600 id 184018.6565
+percolate: number of changes on step 600 is 24121
+percolate: number of changes on step 600 is 5147
+percolate: number of changes on step 700 is 6514
+The average of the map array on step 700 id 188556.9105
+percolate: number of changes on step 700 is 20175
+percolate: number of changes on step 700 is 4558
+percolate: number of changes on step 800 is 5348
+The average of the map array on step 800 id 191665.1421
+percolate: number of changes on step 800 is 19951
+percolate: number of changes on step 800 is 3110
+percolate: number of changes on step 900 is 3740
+percolate: number of changes on step 900 is 3867
+The average of the map array on step 900 id 193582.7995
+percolate: number of changes on step 900 is 15011
+percolate: number of changes on step 1000 is 4154
+The average of the map array on step 1000 id 194360.2899
+percolate: number of changes on step 1000 is 8664
+percolate: number of changes on step 1000 is 4426
+percolate: number of changes on step 1100 is 4811
+percolate: number of changes on step 1100 is 3894
+The average of the map array on step 1100 id 194656.3279
+percolate: number of changes on step 1100 is 6541
+percolate: number of changes on step 1200 is 3785
+The average of the map array on step 1200 id 194917.9702
+percolate: number of changes on step 1200 is 7432
+percolate: number of changes on step 1200 is 5373
+percolate: number of changes on step 1300 is 2210
+The average of the map array on step 1300 id 195310.1363
+percolate: number of changes on step 1300 is 9514
+percolate: number of changes on step 1300 is 4745
+percolate: number of changes on step 1400 is 538
+The average of the map array on step 1400 id 195767.3628
+percolate: number of changes on step 1400 is 10598
+percolate: number of changes on step 1400 is 2686
+percolate: number of changes on step 1500 is 81
+The average of the map array on step 1500 id 196234.3992
+percolate: number of changes on step 1500 is 12296
+percolate: number of changes on step 1500 is 906
+percolate: number of changes on step 1600 is 48
+The average of the map array on step 1600 id 196698.2459
+percolate: number of changes on step 1600 is 12432
+percolate: number of changes on step 1600 is 184
+percolate: number of changes on step 1700 is 176
+The average of the map array on step 1700 id 197116.5850
+percolate: number of changes on step 1700 is 11673
+percolate: number of changes on step 1700 is 116
+percolate: number of changes on step 1800 is 190
+The average of the map array on step 1800 id 197441.4556
+percolate: number of changes on step 1800 is 8126
+percolate: number of changes on step 1800 is 0
+percolate: number of changes on step 1900 is 100
+The average of the map array on step 1900 id 197575.5944
+percolate: number of changes on step 1900 is 3468
+percolate: number of changes on step 1900 is 231
+percolate: number of changes on step 2000 is 53
+The average of the map array on step 2000 id 197597.7812
+percolate: number of changes on step 2000 is 2113
+percolate: number of changes on step 2000 is 573
+percolate: number of changes on step 2100 is 20
+The average of the map array on step 2100 id 197599.1808
+percolate: number of changes on step 2100 is 1553
+percolate: number of changes on step 2100 is 655
+percolate: number of changes on step 2200 is 0
+The average of the map array on step 2200 id 197599.8657
+percolate: number of changes on step 2200 is 2443
+percolate: number of changes on step 2200 is 376
+percolate: number of changes on step 2300 is 0
+The average of the map array on step 2300 id 197600.4122
+percolate: number of changes on step 2300 is 2003
+percolate: number of changes on step 2300 is 48
+percolate: number of changes on step 2400 is 0
+The average of the map array on step 2400 id 197600.9383
+percolate: number of changes on step 2400 is 2487
+percolate: number of changes on step 2400 is 0
+percolate: number of changes on step 2500 is 32
+The average of the map array on step 2500 id 197601.4365
+percolate: number of changes on step 2500 is 2226
+percolate: number of changes on step 2500 is 0
+percolate: number of changes on step 2600 is 26
+The average of the map array on step 2600 id 197601.8636
+percolate: number of changes on step 2600 is 1348
+percolate: number of changes on step 2600 is 0
+percolate: number of changes on step 2700 is 66
+The average of the map array on step 2700 id 197602.0578
+percolate: number of changes on step 2700 is 387
+percolate: number of changes on step 2700 is 0
+percolate: number of changes on step 2800 is 0
+The average of the map array on step 2800 id 197602.0971
+percolate: number of changes on step 2800 is 40
+percolate: number of changes on step 2800 is 0
+Percolate finish. There are no changes in the map array.
+percolate: cluster DOES NOT percolate
+percwrite: visualising the largest 8 clusters
+percwrite: cluster sizes are 167725, 19059, 18562, 14873, 10114, 6467, 5906, 5327
+percwrite: opening file <map288.pgm>
+percwrite: writing data ...
+percwrite: ... done
+percwrite: file closed
+0:
+Communicaiton time is 0.0127.
+Updating time is 3.8725.
+Iteration time is 4.1847.
+Runtime is 4.2989.
+1:
+Communicaiton time is 0.0127.
+Updating time is 3.8829.
+Iteration time is 4.1847.
+Runtime is 4.2060.
+2:
+Communicaiton time is 0.0170.
+Updating time is 3.9028.
+Iteration time is 4.1843.
+Runtime is 4.2060.
+percolate: rho = 0.411000, actual density = 0.410622
+percolate: number of changes on step 100 is 37380
+The average of the map array on step 100 id 147691.9104
+percolate: number of changes on step 100 is 47635
+percolate: number of changes on step 100 is 40789
+percolate: number of changes on step 200 is 23076
+The average of the map array on step 200 id 160338.2217
+percolate: number of changes on step 200 is 44571
+percolate: number of changes on step 200 is 26070
+percolate: number of changes on step 300 is 18569
+The average of the map array on step 300 id 168618.0435
+percolate: number of changes on step 300 is 37528
+percolate: number of changes on step 300 is 15592
+percolate: number of changes on step 400 is 14959
+The average of the map array on step 400 id 174094.7349
+percolate: number of changes on step 400 is 33953
+percolate: number of changes on step 400 is 11307
+percolate: number of changes on step 500 is 12918
+The average of the map array on step 500 id 179192.2711
+percolate: number of changes on step 500 is 29765
+percolate: number of changes on step 500 is 7309
+percolate: number of changes on step 600 is 9287
+percolate: number of changes on step 600 is 24121
+percolate: number of changes on step 600 is 5147
+The average of the map array on step 600 id 184018.6565
+percolate: number of changes on step 700 is 6514
+The average of the map array on step 700 id 188556.9105
+percolate: number of changes on step 700 is 20175
+percolate: number of changes on step 700 is 4558
+percolate: number of changes on step 800 is 19951
+percolate: number of changes on step 800 is 3110
+percolate: number of changes on step 800 is 5348
+The average of the map array on step 800 id 191665.1421
+percolate: number of changes on step 900 is 3867
+The average of the map array on step 900 id 193582.7995
+percolate: number of changes on step 900 is 15011
+percolate: number of changes on step 900 is 3740
+percolate: number of changes on step 1000 is 4154
+The average of the map array on step 1000 id 194360.2899
+percolate: number of changes on step 1000 is 8664
+percolate: number of changes on step 1000 is 4426
+percolate: number of changes on step 1100 is 3894
+The average of the map array on step 1100 id 194656.3279
+percolate: number of changes on step 1100 is 6541
+percolate: number of changes on step 1100 is 4811
+percolate: number of changes on step 1200 is 3785
+The average of the map array on step 1200 id 194917.9702
+percolate: number of changes on step 1200 is 7432
+percolate: number of changes on step 1200 is 5373
+percolate: number of changes on step 1300 is 2210
+The average of the map array on step 1300 id 195310.1363
+percolate: number of changes on step 1300 is 9514
+percolate: number of changes on step 1300 is 4745
+percolate: number of changes on step 1400 is 538
+The average of the map array on step 1400 id 195767.3628
+percolate: number of changes on step 1400 is 10598
+percolate: number of changes on step 1400 is 2686
+percolate: number of changes on step 1500 is 81
+The average of the map array on step 1500 id 196234.3992
+percolate: number of changes on step 1500 is 12296
+percolate: number of changes on step 1500 is 906
+percolate: number of changes on step 1600 is 48
+The average of the map array on step 1600 id 196698.2459
+percolate: number of changes on step 1600 is 12432
+percolate: number of changes on step 1600 is 184
+percolate: number of changes on step 1700 is 176
+The average of the map array on step 1700 id 197116.5850
+percolate: number of changes on step 1700 is 11673
+percolate: number of changes on step 1700 is 116
+percolate: number of changes on step 1800 is 190
+The average of the map array on step 1800 id 197441.4556
+percolate: number of changes on step 1800 is 8126
+percolate: number of changes on step 1800 is 0
+percolate: number of changes on step 1900 is 3468
+percolate: number of changes on step 1900 is 231
+percolate: number of changes on step 1900 is 100
+The average of the map array on step 1900 id 197575.5944
+percolate: number of changes on step 2000 is 53
+The average of the map array on step 2000 id 197597.7812
+percolate: number of changes on step 2000 is 2113
+percolate: number of changes on step 2000 is 573
+percolate: number of changes on step 2100 is 20
+The average of the map array on step 2100 id 197599.1808
+percolate: number of changes on step 2100 is 1553
+percolate: number of changes on step 2100 is 655
+percolate: number of changes on step 2200 is 0
+The average of the map array on step 2200 id 197599.8657
+percolate: number of changes on step 2200 is 2443
+percolate: number of changes on step 2200 is 376
+percolate: number of changes on step 2300 is 0
+The average of the map array on step 2300 id 197600.4122
+percolate: number of changes on step 2300 is 2003
+percolate: number of changes on step 2300 is 48
+percolate: number of changes on step 2400 is 0
+The average of the map array on step 2400 id 197600.9383
+percolate: number of changes on step 2400 is 2487
+percolate: number of changes on step 2400 is 0
+percolate: number of changes on step 2500 is 32
+percolate: number of changes on step 2500 is 2226
+percolate: number of changes on step 2500 is 0
+The average of the map array on step 2500 id 197601.4365
+percolate: number of changes on step 2600 is 26
+The average of the map array on step 2600 id 197601.8636
+percolate: number of changes on step 2600 is 1348
+percolate: number of changes on step 2600 is 0
+percolate: number of changes on step 2700 is 66
+The average of the map array on step 2700 id 197602.0578
+percolate: number of changes on step 2700 is 387
+percolate: number of changes on step 2700 is 0
+percolate: number of changes on step 2800 is 0
+The average of the map array on step 2800 id 197602.0971
+percolate: number of changes on step 2800 is 40
+percolate: number of changes on step 2800 is 0
+Percolate finish. There are no changes in the map array.
+percolate: cluster DOES NOT percolate
+percwrite: visualising the largest 8 clusters
+percwrite: cluster sizes are 167725, 19059, 18562, 14873, 10114, 6467, 5906, 5327
+percwrite: opening file <map288.pgm>
+percwrite: writing data ...
+percwrite: ... done
+percwrite: file closed
+0:
+Communicaiton time is 0.0120.
+Updating time is 3.8807.
+Iteration time is 4.1847.
+Runtime is 4.3586.
+1:
+Communicaiton time is 0.0113.
+Updating time is 3.8984.
+Iteration time is 4.1846.
+Runtime is 4.2165.
+2:
+Communicaiton time is 0.0156.
+Updating time is 3.9036.
+Iteration time is 4.1846.
+Runtime is 4.2165.
