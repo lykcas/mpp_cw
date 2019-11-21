@@ -16,3 +16,4 @@ build
 *.o
 .cache/
 .vscode/
+core.*
