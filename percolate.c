@@ -187,9 +187,9 @@ int main(int argc, char *argv[]) {
     }
     MPI_Reduce(&local_mapsum, &global_mapsum, 1, MPI_LONG_LONG, MPI_SUM, 0,
                comm);
-    if (rank == 0) {
-      global_mapsum = (double)global_mapsum / (double)(L * L);
-    }
+    // if (rank == 0) {
+    //   global_mapsum = (double)global_mapsum / (double)(L * L);
+    // }
 
     /*
      *  Report progress every now and then
@@ -199,7 +199,7 @@ int main(int argc, char *argv[]) {
       printf("percolate: number of changes on step %d is %d\n", step, nchange);
       if (rank == 0)
         printf("The average of the map array on step %d id %.4lf\n", step,
-               global_mapsum);
+               (double)global_mapsum / (double)(L * L));
     }
     nchange_count = nchange;
     MPI_Allreduce(&nchange_count, &nchange_sum, 1, MPI_INT, MPI_SUM, comm);
@@ -299,12 +299,12 @@ int main(int argc, char *argv[]) {
 
   end_golbal = MPI_Wtime();
   MPI_Finalize();
-  if (rank == 0) {
-    printf("The percolate program spend %.3f seconds in iteration part.\n",
-           end_iteration - start_iteration);
-    printf("The percolate program spend %.3f seconds in whole program.\n",
-           end_golbal - start_global);
-  }
+  
+  printf("The percolate program spend %.4f seconds in iteration part rank %d.\n",
+          end_iteration - start_iteration, rank);
+  printf("The percolate program spend %.4f seconds in whole program.\n",
+          end_golbal - start_global);
+  
   free((void *)smallmap);
   free((void *)submap);
   free((void *)map);
