@@ -1,0 +1,34 @@
+#PBS -A d171-s1951167
+#PBS -N percolateweak
+#PBS -j oe
+#PBS -l walltime=0:29:00
+#PBS -l place=excl
+
+# You will need to change the value of "select" below if you run on
+# more than 36 processes; the value of "ncpus" *is always 36*.
+
+#PBS -l select=2:ncpus=36
+
+module load mpt
+module load intel-compilers-18
+
+
+# Change directory back to where the job was submitted from
+
+cd $PBS_O_WORKDIR
+
+echo -e '******************\n'
+mpiexec_mpt -ppn 36 -n 2 ./percolate288 1564
+
+echo -e '******************\n'
+mpiexec_mpt -ppn 36 -n 8 ./percolate576 1564
+
+echo -e '******************\n'
+mpiexec_mpt -ppn 36 -n 18 ./percolate864 1564
+
+echo -e '******************\n'
+mpiexec_mpt -ppn 36 -n 32 ./percolate1152 1564
+
+echo -e '******************\n'
+mpiexec_mpt -ppn 36 -n 72 ./percolate1728 1564
+

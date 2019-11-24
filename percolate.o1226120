@@ -1,0 +1,33 @@
+anaconda(3):ERROR:105: Unable to locate a modulefile for 'anaconda/python3s'
+150
+0.004363
+percolate: number of changes on step 200 is 3411
+percolate: number of changes on step 200 is 921
+percolate: number of changes on step 200 is 1293
+percolate: number of changes on step 200 is 2209
+The average of the map array on step 200 id 23532.4336
+percolate: number of changes on step 400 is 603
+percolate: number of changes on step 400 is 151
+percolate: number of changes on step 400 is 1303
+The average of the map array on step 400 id 25118.5728
+percolate: number of changes on step 400 is 396
+percolate: number of changes on step 600 is 334
+percolate: number of changes on step 600 is 311
+The average of the map array on step 600 id 25322.7078
+percolate: number of changes on step 600 is 530
+percolate: number of changes on step 600 is 244
+percolate: number of changes on step 800 is 86
+percolate: number of changes on step 800 is 80
+The average of the map array on step 800 id 25326.6897
+percolate: number of changes on step 800 is 210
+percolate: number of changes on step 800 is 49
+percolate: number of changes on step 1000 is 0
+percolate: number of changes on step 1000 is 0
+percolate: number of changes on step 1000 is 0
+percolate: number of changes on step 1000 is 0
+The average of the map array on step 1000 id 25327.2398
+Percolate finish. There are no changes in the map array.
+Communicaiton 0.0324 Updating 0.1025 Iteration 0.1415 Runtime 0.1455
+Communicaiton 0.0267 Updating 0.1081 Iteration 0.1414 Runtime 0.1453
+Communicaiton 0.0320 Updating 0.1035 Iteration 0.1414 Runtime 0.1453
+Communicaiton 0.0107 Updating 0.1239 Iteration 0.1414 Runtime 0.1453

@@ -1,0 +1,19 @@
+anaconda(3):ERROR:105: Unable to locate a modulefile for 'anaconda/python3s'
+************test frequency*************This is processor 128 ***********************************\n
+0.030433
+0.033459
+0.033220
+************test frequency*************This is processor 144 ***********************************\n
+0.034933
+0.034313
+0.034741
+************test frequency*************This is processor 192 ***********************************\n
+0.035049
+0.034915
+0.056528
+************test frequency*************This is processor 288 ***********************************\n
+0.037784
+0.036486
+0.038439
+Warning: Permanently added 'r1i2n14.ib0.icexa.epcc.ed.ac.uk,10.148.0.212' (ECDSA) to the list of known hosts.
+Warning: Permanently added 'r1i2n19.ib0.icexa.epcc.ed.ac.uk,10.148.0.186' (ECDSA) to the list of known hosts.

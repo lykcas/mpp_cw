@@ -1,0 +1,152 @@
+anaconda(3):ERROR:105: Unable to locate a modulefile for 'anaconda/python3s'
+************test frequency*************This is processor 1 ***********************************\n
+percolate: params are L = 288, rho = 0.411000, seed = 1564
+percolate: rho = 0.411000, actual density = 0.408119
+Percolate finish. There are no changes in the map array.
+percolate: cluster DOES percolate
+percwrite: visualising the largest 8 clusters
+percwrite: cluster sizes are 24569, 8801, 1597, 912, 471, 383, 358, 270
+percwrite: opening file <map288.pgm>
+percwrite: writing data ...
+percwrite: ... done
+percwrite: file closed
+0:
+Communicaiton time is 0.0031.
+Updating time is 0.4522.
+Iteration time is 0.4861.
+Runtime is 0.5007.
+percolate: params are L = 288, rho = 0.411000, seed = 1564
+percolate: rho = 0.411000, actual density = 0.408119
+Percolate finish. There are no changes in the map array.
+percolate: cluster DOES percolate
+percwrite: visualising the largest 8 clusters
+percwrite: cluster sizes are 24569, 8801, 1597, 912, 471, 383, 358, 270
+percwrite: opening file <map288.pgm>
+percwrite: writing data ...
+percwrite: ... done
+percwrite: file closed
+0:
+Communicaiton time is 0.0031.
+Updating time is 0.4724.
+Iteration time is 0.5073.
+Runtime is 0.5336.
+percolate: params are L = 288, rho = 0.411000, seed = 1564
+percolate: rho = 0.411000, actual density = 0.408119
+Percolate finish. There are no changes in the map array.
+percolate: cluster DOES percolate
+percwrite: visualising the largest 8 clusters
+percwrite: cluster sizes are 24569, 8801, 1597, 912, 471, 383, 358, 270
+percwrite: opening file <map288.pgm>
+percwrite: writing data ...
+percwrite: ... done
+percwrite: file closed
+0:
+Communicaiton time is 0.0030.
+Updating time is 0.4523.
+Iteration time is 0.4861.
+Runtime is 0.4990.
+percolate: params are L = 288, rho = 0.411000, seed = 1564
+percolate: rho = 0.411000, actual density = 0.408119
+Percolate finish. There are no changes in the map array.
+percolate: cluster DOES percolate
+percwrite: visualising the largest 8 clusters
+percwrite: cluster sizes are 24569, 8801, 1597, 912, 471, 383, 358, 270
+percwrite: opening file <map288.pgm>
+percwrite: writing data ...
+percwrite: ... done
+percwrite: file closed
+0:
+Communicaiton time is 0.0030.
+Updating time is 0.4523.
+Iteration time is 0.4858.
+Runtime is 0.5029.
+percolate: params are L = 288, rho = 0.411000, seed = 1564
+percolate: rho = 0.411000, actual density = 0.408119
+Percolate finish. There are no changes in the map array.
+percolate: cluster DOES percolate
+percwrite: visualising the largest 8 clusters
+percwrite: cluster sizes are 24569, 8801, 1597, 912, 471, 383, 358, 270
+percwrite: opening file <map288.pgm>
+percwrite: writing data ...
+percwrite: ... done
+percwrite: file closed
+0:
+Communicaiton time is 0.0031.
+Updating time is 0.4701.
+Iteration time is 0.5049.
+Runtime is 0.5191.
+percolate: params are L = 288, rho = 0.411000, seed = 1564
+percolate: rho = 0.411000, actual density = 0.408119
+Percolate finish. There are no changes in the map array.
+percolate: cluster DOES percolate
+percwrite: visualising the largest 8 clusters
+percwrite: cluster sizes are 24569, 8801, 1597, 912, 471, 383, 358, 270
+percwrite: opening file <map288.pgm>
+percwrite: writing data ...
+percwrite: ... done
+percwrite: file closed
+0:
+Communicaiton time is 0.0032.
+Updating time is 0.4797.
+Iteration time is 0.5150.
+Runtime is 0.5319.
+percolate: params are L = 288, rho = 0.411000, seed = 1564
+percolate: rho = 0.411000, actual density = 0.408119
+Percolate finish. There are no changes in the map array.
+percolate: cluster DOES percolate
+percwrite: visualising the largest 8 clusters
+percwrite: cluster sizes are 24569, 8801, 1597, 912, 471, 383, 358, 270
+percwrite: opening file <map288.pgm>
+percwrite: writing data ...
+percwrite: ... done
+percwrite: file closed
+0:
+Communicaiton time is 0.0030.
+Updating time is 0.4527.
+Iteration time is 0.4866.
+Runtime is 0.5035.
+percolate: params are L = 288, rho = 0.411000, seed = 1564
+percolate: rho = 0.411000, actual density = 0.408119
+Percolate finish. There are no changes in the map array.
+percolate: cluster DOES percolate
+percwrite: visualising the largest 8 clusters
+percwrite: cluster sizes are 24569, 8801, 1597, 912, 471, 383, 358, 270
+percwrite: opening file <map288.pgm>
+percwrite: writing data ...
+percwrite: ... done
+percwrite: file closed
+0:
+Communicaiton time is 0.0030.
+Updating time is 0.4523.
+Iteration time is 0.4861.
+Runtime is 0.5444.
+percolate: params are L = 288, rho = 0.411000, seed = 1564
+percolate: rho = 0.411000, actual density = 0.408119
+Percolate finish. There are no changes in the map array.
+percolate: cluster DOES percolate
+percwrite: visualising the largest 8 clusters
+percwrite: cluster sizes are 24569, 8801, 1597, 912, 471, 383, 358, 270
+percwrite: opening file <map288.pgm>
+percwrite: writing data ...
+percwrite: ... done
+percwrite: file closed
+0:
+Communicaiton time is 0.0031.
+Updating time is 0.4674.
+Iteration time is 0.5026.
+Runtime is 0.5728.
+percolate: params are L = 288, rho = 0.411000, seed = 1564
+percolate: rho = 0.411000, actual density = 0.408119
+Percolate finish. There are no changes in the map array.
+percolate: cluster DOES percolate
+percwrite: visualising the largest 8 clusters
+percwrite: cluster sizes are 24569, 8801, 1597, 912, 471, 383, 358, 270
+percwrite: opening file <map288.pgm>
+percwrite: writing data ...
+percwrite: ... done
+percwrite: file closed
+0:
+Communicaiton time is 0.0031.
+Updating time is 0.4587.
+Iteration time is 0.4934.
+Runtime is 0.5131.

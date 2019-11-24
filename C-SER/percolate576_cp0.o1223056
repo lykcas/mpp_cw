@@ -1,0 +1,61 @@
+anaconda(3):ERROR:105: Unable to locate a modulefile for 'anaconda/python3s'
+percolate: params are L = 576, rho = 0.411000, seed = 1564
+percolate: rho = 0.411000, actual density = 0.410632
+percolate: number of changes on step 200 is 31960
+percolate: number of changes on step 400 is 12184
+percolate: number of changes on step 600 is 1886
+percolate: number of changes on step 800 is 918
+percolate: number of changes on step 1000 is 1154
+percolate: number of changes on step 1200 is 791
+percolate: number of changes on step 1400 is 377
+percolate: number of changes on step 1600 is 151
+----------------   0.850000 ------------
+percolate: cluster DOES NOT percolate
+percolate: params are L = 576, rho = 0.411000, seed = 1564
+percolate: rho = 0.411000, actual density = 0.410632
+percolate: number of changes on step 200 is 31960
+percolate: number of changes on step 400 is 12184
+percolate: number of changes on step 600 is 1886
+percolate: number of changes on step 800 is 918
+percolate: number of changes on step 1000 is 1154
+percolate: number of changes on step 1200 is 791
+percolate: number of changes on step 1400 is 377
+percolate: number of changes on step 1600 is 151
+----------------   0.850000 ------------
+percolate: cluster DOES NOT percolate
+percolate: params are L = 576, rho = 0.411000, seed = 1564
+percolate: rho = 0.411000, actual density = 0.410632
+percolate: number of changes on step 200 is 31960
+percolate: number of changes on step 400 is 12184
+percolate: number of changes on step 600 is 1886
+percolate: number of changes on step 800 is 918
+percolate: number of changes on step 1000 is 1154
+percolate: number of changes on step 1200 is 791
+percolate: number of changes on step 1400 is 377
+percolate: number of changes on step 1600 is 151
+----------------   0.870000 ------------
+percolate: cluster DOES NOT percolate
+percolate: params are L = 576, rho = 0.411000, seed = 1564
+percolate: rho = 0.411000, actual density = 0.410632
+percolate: number of changes on step 200 is 31960
+percolate: number of changes on step 400 is 12184
+percolate: number of changes on step 600 is 1886
+percolate: number of changes on step 800 is 918
+percolate: number of changes on step 1000 is 1154
+percolate: number of changes on step 1200 is 791
+percolate: number of changes on step 1400 is 377
+percolate: number of changes on step 1600 is 151
+----------------   0.850000 ------------
+percolate: cluster DOES NOT percolate
+percolate: params are L = 576, rho = 0.411000, seed = 1564
+percolate: rho = 0.411000, actual density = 0.410632
+percolate: number of changes on step 200 is 31960
+percolate: number of changes on step 400 is 12184
+percolate: number of changes on step 600 is 1886
+percolate: number of changes on step 800 is 918
+percolate: number of changes on step 1000 is 1154
+percolate: number of changes on step 1200 is 791
+percolate: number of changes on step 1400 is 377
+percolate: number of changes on step 1600 is 151
+----------------   0.850000 ------------
+percolate: cluster DOES NOT percolate

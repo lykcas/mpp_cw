@@ -1,0 +1,13 @@
+anaconda(3):ERROR:105: Unable to locate a modulefile for 'anaconda/python3s'
+************test frequency*************This is processor 144 ***********************************\n
+0.043125
+0.043000
+0.041126
+************test frequency*************This is processor 192 ***********************************\n
+0.042652
+0.038570
+0.039412
+************test frequency*************This is processor 288 ***********************************\n
+0.038203
+0.038641
+0.037231

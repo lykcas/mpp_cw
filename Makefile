@@ -5,7 +5,7 @@ CFLAGS=	-O3 -cc=icc
 
 LFLAGS= $(CFLAGS)
 
-EXE=	percolate3
+EXE=	percolate1152
 
 INC= \
 	percolate.h \

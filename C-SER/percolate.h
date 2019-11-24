@@ -6,7 +6,7 @@
  *  System size L
  */
 
-#define L 216
+//#define L 100
 
 /*
  *  Although overall system is square, i.e. size L x L, we will define
@@ -16,8 +16,8 @@
  *  processes, then M = L/P and N = L
  */
 
-#define M L
-#define N L
+//#define M L
+//#define N L
 
 /*
  *  Prototypes for supplied functions
@@ -27,10 +27,10 @@
  *  Visualisation
  */
 
-void percwrite(char *percfile, int map[M][N], int ncluster);
+//void percwrite(char *percfile, int map[M][N], int ncluster);
 
 /*
- *  Random numbers
+ *:  Random numbers
  */
 
 void rinit(int ijkl);

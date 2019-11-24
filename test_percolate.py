@@ -1,7 +1,5 @@
 import pytest
-import os
 import subprocess
-from test import support
 
 
 def test_file():

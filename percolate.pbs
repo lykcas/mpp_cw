@@ -1,7 +1,7 @@
 #PBS -A d171-s1951167
-#PBS -N myjob1152
+#PBS -N percolate
 #PBS -j oe
-#PBS -l walltime=00:59:00
+#PBS -l walltime=00:10:00
 #PBS -l place=excl
 
 # You will need to change the value of "select" below if you run on
@@ -17,11 +17,18 @@ module load intel-compilers-18
 
 cd $PBS_O_WORKDIR
 
-for p in 1 2 3
-do 
-  echo '******************************This is processor' $p '***********************************\n'
-  for i in 1 2 3 4 5
-  do
-    mpiexec_mpt -ppn 36 -n $p ./percolate2 1564
-  done
-done
+
+mpiexec_mpt -ppn 36 -n 1 ./percolate288 1564
+
+echo '----------------------'
+mpiexec_mpt -ppn 36 -n 1 ./percolate576 1564
+
+
+echo '----------------------'
+mpiexec_mpt -ppn 36 -n 1 ./percolate864 1564
+
+echo '----------------------'
+mpiexec_mpt -ppn 36 -n 1 ./percolate1152 1564
+
+echo '----------------------'
+mpiexec_mpt -ppn 36 -n 1 ./percolate1728 1564

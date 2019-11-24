@@ -1,0 +1,82 @@
+anaconda(3):ERROR:105: Unable to locate a modulefile for 'anaconda/python3s'
+percolate: params are L = 100, rho = 0.411000, seed = 1564
+percolate: rho = 0.411000, actual density = 0.410500
+percolate: number of changes on step 200 is 25
+----------------   0.000000 ------------
+percolate: cluster DOES NOT percolate
+percolate: params are L = 200, rho = 0.411000, seed = 1564
+percolate: rho = 0.411000, actual density = 0.405950
+percolate: number of changes on step 200 is 1732
+percolate: number of changes on step 400 is 66
+----------------   0.090000 ------------
+percolate: cluster DOES NOT percolate
+percolate: params are L = 300, rho = 0.411000, seed = 1564
+percolate: rho = 0.411000, actual density = 0.408844
+percolate: number of changes on step 200 is 5027
+percolate: number of changes on step 400 is 1343
+----------------   0.250000 ------------
+percolate: cluster DOES NOT percolate
+percolate: params are L = 400, rho = 0.411000, seed = 1564
+percolate: rho = 0.411000, actual density = 0.409981
+percolate: number of changes on step 200 is 11465
+percolate: number of changes on step 400 is 3965
+percolate: number of changes on step 600 is 788
+percolate: number of changes on step 800 is 819
+percolate: number of changes on step 1000 is 116
+----------------   0.960000 ------------
+percolate: cluster DOES NOT percolate
+percolate: params are L = 500, rho = 0.411000, seed = 1564
+percolate: rho = 0.411000, actual density = 0.410196
+percolate: number of changes on step 200 is 28576
+percolate: number of changes on step 400 is 22943
+percolate: number of changes on step 600 is 9122
+percolate: number of changes on step 800 is 5253
+percolate: number of changes on step 1000 is 1582
+percolate: number of changes on step 1200 is 904
+percolate: number of changes on step 1400 is 122
+----------------   1.900000 ------------
+percolate: cluster DOES NOT percolate
+percolate: params are L = 600, rho = 0.411000, seed = 1564
+percolate: rho = 0.411000, actual density = 0.410803
+percolate: number of changes on step 200 is 30247
+percolate: number of changes on step 400 is 6625
+percolate: number of changes on step 600 is 385
+percolate: number of changes on step 800 is 20
+----------------   1.550000 ------------
+percolate: cluster DOES NOT percolate
+percolate: params are L = 700, rho = 0.411000, seed = 1564
+percolate: rho = 0.411000, actual density = 0.410959
+percolate: number of changes on step 200 is 55559
+percolate: number of changes on step 400 is 34479
+percolate: number of changes on step 600 is 23558
+percolate: number of changes on step 800 is 15131
+percolate: number of changes on step 1000 is 6962
+percolate: number of changes on step 1200 is 5143
+percolate: number of changes on step 1400 is 2154
+----------------   3.890000 ------------
+percolate: cluster DOES NOT percolate
+percolate: params are L = 800, rho = 0.411000, seed = 1564
+percolate: rho = 0.411000, actual density = 0.410970
+percolate: number of changes on step 200 is 75617
+percolate: number of changes on step 400 is 46465
+percolate: number of changes on step 600 is 30511
+percolate: number of changes on step 800 is 26898
+percolate: number of changes on step 1000 is 20159
+percolate: number of changes on step 1200 is 15998
+percolate: number of changes on step 1400 is 8748
+percolate: number of changes on step 1600 is 3747
+percolate: number of changes on step 1800 is 1488
+----------------   6.430000 ------------
+percolate: cluster DOES NOT percolate
+percolate: params are L = 900, rho = 0.411000, seed = 1564
+percolate: rho = 0.411000, actual density = 0.410610
+percolate: number of changes on step 200 is 90224
+percolate: number of changes on step 400 is 52652
+percolate: number of changes on step 600 is 27623
+percolate: number of changes on step 800 is 14732
+percolate: number of changes on step 1000 is 6177
+percolate: number of changes on step 1200 is 337
+percolate: number of changes on step 1400 is 69
+----------------   5.850000 ------------
+percolate: cluster DOES NOT percolate
+This is the end of expriment!

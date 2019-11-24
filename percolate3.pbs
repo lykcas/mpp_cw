@@ -1,0 +1,29 @@
+#PBS -A d171-s1951167
+#PBS -N percolate1152_cp3
+#PBS -j oe
+#PBS -l walltime=01:59:00
+#PBS -l place=excl
+
+# You will need to change the value of "select" below if you run on
+# more than 36 processes; the value of "ncpus" *is always 36*.
+
+#PBS -l select=1:ncpus=36
+
+module load mpt
+module load intel-compilers-18
+
+
+# Change directory back to where the job was submitted from
+
+cd $PBS_O_WORKDIR
+
+for p in 6 8 9 12 16
+do 
+  echo -e '******************************This is processor' $p '***********************************\n'
+  for i in 1 2 3 4 5 6 7 8 9 10
+  do
+    mpiexec_mpt -ppn 36 -n $p ./percolate1152 1564
+    echo -e '\n'
+  done
+  
+done

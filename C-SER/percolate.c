@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-
+#include <time.h>
 #include "percolate.h"
 
 /*
@@ -12,7 +12,10 @@ int main(int argc, char *argv[])
   /*
    *  Define the main arrays for the simulation
    */
-
+  int L, M, N;
+  L = atoi(argv[2]);
+  M = L;
+  N = L;
   int old[M+2][N+2], new[M+2][N+2];
 
   /*
@@ -38,11 +41,11 @@ int main(int argc, char *argv[])
   int itop, ibot, perc;
   double r;
 
-  if (argc != 2)
-    {
-      printf("Usage: percolate <seed>\n");
-      return 1;
-    }
+//  if (argc != 2)
+  //  {
+    //  printf("Usage: percolate <seed>\n");
+      //return 1;
+   // }
 
   /*
    *  Set most important value: the rock density rho (between 0 and 1)
@@ -119,21 +122,29 @@ int main(int argc, char *argv[])
     */
 
   maxstep = 16*L;
-  printfreq = 100;
+  printfreq = 200;
 
   step = 1;
   nchange = 1;
 
+  clock_t start, end;
+  start = clock();
   while (step <= maxstep)
     {
       nchange = 0;
 
+      for (j=1; j <= N; j++)
+        {
+          old[0][j]   = old[M][j];
+          old[M+1][j] = old[1][j];
+        }
+
       for (i=1; i<=M; i++)
-	{
-	  for (j=1; j<=N; j++)
 	    {
-	      oldval = old[i][j];
-	      newval = oldval;
+	      for (j=1; j<=N; j++)
+	      {
+          oldval = old[i][j];
+          newval = oldval;
 
 	      /*
 	       * Set new[i][j] to be the maximum value of old[i][j]
@@ -156,15 +167,15 @@ int main(int argc, char *argv[])
 	      new[i][j] = newval;
 	    }
 	}
-
+      if (nchange == 0) break;
       /*
        *  Report progress every now and then
        */
 
       if (step % printfreq == 0)
 	{
-	  printf("percolate: number of changes on step %d is %d\n",
-		 step, nchange);
+	   printf("percolate: number of changes on step %d is %d\n",
+		  step, nchange);
 	}
 
       /*
@@ -181,7 +192,9 @@ int main(int argc, char *argv[])
 
       step++;
     }
+  end = clock();
 
+  printf("----------------   %f ------------\n", (double)(end - start) / CLOCKS_PER_SEC);
   /*
    *  We set a maximum number of steps to ensure the algorithm always
    *  terminates. However, if we hit this limit before the algorithm
@@ -244,7 +257,7 @@ int main(int argc, char *argv[])
    *  clusters etc.
    */
 
-  percwrite("map.pgm", map, 1);
+  // percwrite("map.pgm", map, 1);
 
   return 0;
 }

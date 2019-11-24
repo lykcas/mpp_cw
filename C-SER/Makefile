@@ -1,6 +1,6 @@
 MF=	Makefile
 
-CC=	icc
+CC=	gcc
 CFLAGS=	-O3
 
 LFLAGS= $(CFLAGS)
@@ -12,8 +12,7 @@ INC= \
 
 SRC= \
 	percolate.c \
-	percwrite.c \
-	uni.c
+	uni.c \
 
 #
 # No need to edit below this line

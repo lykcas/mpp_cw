@@ -1,13 +1,13 @@
 #PBS -A d171-s1951167
-#PBS -N myjobfreq50
+#PBS -N percolate
 #PBS -j oe
-#PBS -l walltime=00:59:00
+#PBS -l walltime=01:59:00
 #PBS -l place=excl
 
 # You will need to change the value of "select" below if you run on
 # more than 36 processes; the value of "ncpus" *is always 36*.
 
-#PBS -l select=1:ncpus=36
+#PBS -l select=8:ncpus=36
 
 module load mpt
 module load intel-compilers-18
@@ -17,11 +17,11 @@ module load intel-compilers-18
 
 cd $PBS_O_WORKDIR
 
-for p in 1
+for p in 144 192 288
 do 
   echo '************test frequency*************This is processor' $p '***********************************\n'
-  for i in 1 2 3 4 5 6 7 8 9 10
+  for i in 1 2 3
   do
-    mpiexec_mpt -ppn 36 -n $p ./percolate3 1564
+    mpiexec_mpt -ppn 36 -n $p ./percolate576 1564
   done
 done

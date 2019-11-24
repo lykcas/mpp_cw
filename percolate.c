@@ -28,13 +28,13 @@ int main(int argc, char *argv[]) {
   //                                time_update = 0;
   int rank, size;
 
-  rho = 0.411;
+  rho = 0;
 
   seed = atoi(argv[1]);
 
-  if (rank == 0) {
-    printf("percolate: params are L = %d, rho = %f, seed = %d\n", L, rho, seed);
-  }
+  // if (rank == 0) {
+  //   printf("percolate: params are L = %d, rho = %f, seed = %d\n", L, rho, seed);
+  // }
 
   rinit(seed);
 
@@ -97,8 +97,11 @@ int main(int argc, char *argv[]) {
   /*
    *  Update for a fixed number of iterations
    */
+  double start_test = MPI_Wtime();
   iteration((int **)old, (int **)new, M, N, L, rank, up_nbr,
             down_nbr, left_nbr, right_nbr, time_info);
+  double end_test = MPI_Wtime();
+  if (rank == 0) printf("%f\n", end_test - start_test);
 
   /*
    *  Copy the centre of old, excluding the halos, into map
@@ -109,12 +112,12 @@ int main(int argc, char *argv[]) {
    *  Test to see if percolation occurred by looking for positive numbers
    *  that appear on both the top and bottom edges
    */
-  judge_write((int **)map, rank, L);
+  // judge_write((int **)map, rank, L);
 
   time_info->end_global = MPI_Wtime();
   MPI_Finalize();
 
-  time_print(rank, time_info);
+  // time_print(rank, time_info);
 
   free((void *)smallmap);
   free((void *)submap);
@@ -140,8 +143,8 @@ void initialmap(int **map, int rank, int l, double rho) {
         }
       }
     }
-    printf("percolate: rho = %f, actual density = %f\n", rho,
-           1.0 - ((double)nhole) / ((double)l * l));
+    // printf("percolate: rho = %f, actual density = %f\n", rho,
+    //        1.0 - ((double)nhole) / ((double)l * l));
   }
 }
 
@@ -182,8 +185,8 @@ void halo(int **old, int **smallmap, int M, int N) {
 void iteration(int **old, int **new, int M, int N, int l, int rank, int up_nbr,
                int down_nbr, int left_nbr, int right_nbr,
                struct time *time_info) {
-  int maxstep = 16 * L;
-  int printfreq = 50;
+  int maxstep = 16 * l;
+  int printfreq = 200;
   int step = 1;
   int nchange = 1, nchange_count = 0;
   int oldval, newval, i, j, nchange_sum;
@@ -194,6 +197,7 @@ void iteration(int **old, int **new, int M, int N, int l, int rank, int up_nbr,
   MPI_Datatype mpi_vec_type;
   MPI_Type_vector(M + 2, 1, N + 2, MPI_INT, &mpi_vec_type);
   MPI_Type_commit(&mpi_vec_type);
+
   time_info->start_iteration = MPI_Wtime();
   while (step <= maxstep) {
     double start_commu = MPI_Wtime();
@@ -250,24 +254,32 @@ void iteration(int **old, int **new, int M, int N, int l, int rank, int up_nbr,
     }
     double end_update = MPI_Wtime();
     temp_update += (end_update - start_update);
-    
 
-    if (step % printfreq == 0) {
-      MPI_Reduce(&local_mapsum, &global_mapsum, 1, MPI_LONG_LONG, MPI_SUM, 0,
-               MPI_COMM_WORLD);
-      // printf("percolate: number of changes on step %d is %d\n", step, nchange);
-      // if (rank == 0)
-      //   printf("The average of the map array on step %d id %.4lf\n", step,
-      //          (double)global_mapsum / (double)(L * L));
-    }
+    /* Calculate the sum of the numbers in map. */
+    MPI_Reduce(&local_mapsum, &global_mapsum, 1, MPI_LONG_LONG, MPI_SUM, 0,
+              MPI_COMM_WORLD);
+      
+
+    /* Calculate the average of the number in map. */
+    // if (rank == 0)
+      // printf("The average of the map array on step %d id %.4lf\n", step,
+      //        (double)global_mapsum / (double)(L * L));
+    /* Find whether the processors are changing or stopping changing. */
     nchange_count = nchange;
     MPI_Allreduce(&nchange_count, &nchange_sum, 1, MPI_INT, MPI_SUM,
                   MPI_COMM_WORLD);
+    /* If the processors all stop changing, stop the iteration part. */
     if (nchange_sum == 0) {
-      if (rank == 0)
-        printf("Percolate finish. There are no changes in the map array.\n");
+      // if (rank == 0)
+        // printf("Percolate finish. There are no changes in the map array.\n");
+      if (rank == 0) printf("%d\n", step);
       break;
     }
+
+    if (step % printfreq == 0) {
+      // printf("percolate: number of changes on step %d is %d\n", step, nchange);
+    }
+    
 
     /*
      *  Copy back in preparation for next step, omitting halos
@@ -281,6 +293,7 @@ void iteration(int **old, int **new, int M, int N, int l, int rank, int up_nbr,
 
     step++;
   }
+
   time_info->end_iteration = MPI_Wtime();
   time_info->time_commu = temp_commu;
   time_info->time_update = temp_update;
@@ -290,6 +303,7 @@ void iteration(int **old, int **new, int M, int N, int l, int rank, int up_nbr,
            maxstep);
   }
 }
+
 
 void gather(int **smallmap, int **old, int **map, int M, int N, int l,
             int rank) {
@@ -346,10 +360,14 @@ void judge_write(int **map, int rank, int l) {
 }
 
 void time_print(int rank, struct time *time_info) {
+  // printf(
+  //     "Communicaiton %.4f Updating %.4f Iteration "
+  //     "%.4f Runtime %.4f",
+  //     time_info->time_commu, time_info->time_update,
+  //     time_info->end_iteration - time_info->start_iteration,
+  //     time_info->end_global - time_info->start_global);
   printf(
-      "%d:\nCommunicaiton time is %.4f.\nUpdating time is %.4f.\nIteration "
-      "time is %.4f.\nRuntime is %.4f.\n",
-      rank, time_info->time_commu, time_info->time_update,
-      time_info->end_iteration - time_info->start_iteration,
-      time_info->end_global - time_info->start_global);
+      "%.4f %.4f %.4f\n",
+      time_info->time_commu, time_info->time_update,
+      time_info->end_iteration - time_info->start_iteration);
 }
