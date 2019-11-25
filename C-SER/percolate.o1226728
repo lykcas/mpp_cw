@@ -1,0 +1,19 @@
+anaconda(3):ERROR:105: Unable to locate a modulefile for 'anaconda/python3s'
+percolate: params are L = 1000, rho = 0.411000, seed = 1564
+percolate: rho = 0.411000, actual density = 0.410551
+percolate: number of changes on step 200 is 118694
+percolate: number of changes on step 400 is 84411
+percolate: number of changes on step 600 is 73604
+percolate: number of changes on step 800 is 53660
+percolate: number of changes on step 1000 is 42158
+percolate: number of changes on step 1200 is 40275
+percolate: number of changes on step 1400 is 32519
+percolate: number of changes on step 1600 is 16916
+percolate: number of changes on step 1800 is 10119
+percolate: number of changes on step 2000 is 7877
+percolate: number of changes on step 2200 is 3409
+percolate: number of changes on step 2400 is 1322
+percolate: number of changes on step 2600 is 515
+2734
+----------------   19.340000 ------------
+percolate: cluster DOES NOT percolate

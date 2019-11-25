@@ -16,7 +16,10 @@
 
 cd $PBS_O_WORKDIR
 
-mpiexec_mpt -ppn 36 -n 1 ./percolate100 1564
+./percolate_2 1564 288
+./percolate_2 1564 576
+./percolate_2 1564 864
+./percolate_2 1564 1152
+./percolate_2 1564 1728
 
 
-mpiexec_mpt -ppn 36 -n 4 ./percolate200 1564

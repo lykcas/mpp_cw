@@ -19,8 +19,7 @@ float uni_u[98];	/* Was U(97) in Fortran version -- too lazy to fix */
 float uni_c, uni_cd, uni_cm;
 int uni_ui, uni_uj;
 
-float uni(void)
-{
+float uni(void) {
 	float luni;			/* local variable for uni */
 
 	luni = uni_u[uni_ui] - uni_u[uni_uj];
@@ -38,8 +37,7 @@ float uni(void)
 	return (float) luni;
 }
 
-void rstart(int i, int j, int k, int l)
-{
+void rstart(int i, int j, int k, int l) {
 	int ii, jj, m;
 	float s, t;
 
@@ -83,8 +81,7 @@ void rstart(int i, int j, int k, int l)
  *     a proof to go with it. spb 12/12/90 
  */
 
-void rinit(int ijkl)
-{
+void rinit(int ijkl) {
 	int i, j, k, l, ij, kl;
 
 	/* check ijkl is within range */
@@ -94,7 +91,7 @@ void rinit(int ijkl)
 		exit(3);
                	}
 
-/*        printf("rinit: seed_ijkl = %d\n", ijkl); */
+	/* printf("rinit: seed_ijkl = %d\n", ijkl); */
 
 	/* decompose the long integer into the the equivalent four
 	 * integers for rstart. This should be a 1-1 mapping
@@ -111,40 +108,35 @@ void rinit(int ijkl)
 	k = ((kl/169) % 178) + 1;
 	l = kl % 169;
 
-	if( (i <= 0) || (i > 178) )
-		{
+	if( (i <= 0) || (i > 178) ) {
 		printf("rinit: i = %d -- out of range\n\n", i);
 		exit(3);
-               	}
+  }
 
-	if( (j <= 0) || (j > 178) )
-		{
+	if( (j <= 0) || (j > 178) ) {
 		printf("rinit: j = %d -- out of range\n\n", j);
 		exit(3);
-               	}
+  }
 
-	if( (k <= 0) || (k > 178) )
-		{
+	if( (k <= 0) || (k > 178) ) {
 		printf("rinit: k = %d -- out of range\n\n", k);
 		exit(3);
-               	}
+  }
 
-	if( (l < 0) || (l > 168) )
-		{
+	if( (l < 0) || (l > 168) ) {
 		printf("rinit: l = %d -- out of range\n\n", l);
 		exit(3);
-               	}
+  }
 
-	if (i == 1 && j == 1 && k == 1)
-		{
-                printf("rinit: 1 1 1 not allowed for 1st 3 seeds\n\n");
+	if (i == 1 && j == 1 && k == 1) {
+    printf("rinit: 1 1 1 not allowed for 1st 3 seeds\n\n");
 		exit(4);
-                }
+  }
 
-/*        printf("rinit: initialising RNG via rstart(%d, %d, %d, %d)\n",
+	/*        printf("rinit: initialising RNG via rstart(%d, %d, %d, %d)\n",
 				i, j, k, l); */
 
-        rstart(i, j, k, l);
+  rstart(i, j, k, l);
 
 }
 

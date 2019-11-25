@@ -23,7 +23,6 @@ int main(int argc, char *argv[])
    *  is of size LxL because, even in our parallel program, we do
    *  these two steps in serial
    */
-
   int map[L][L];
 
   /*
@@ -32,26 +31,21 @@ int main(int argc, char *argv[])
 
   int seed;
   double rho;
-
-  /*
-   *  Local variables
-   */
-
   int i, j, nhole, step, maxstep, oldval, newval, nchange, printfreq;
   int itop, ibot, perc;
   double r;
 
-//  if (argc != 2)
-  //  {
-    //  printf("Usage: percolate <seed>\n");
-      //return 1;
-   // }
+  //
+  if (argc != 2) {
+    printf("Usage: percolate <seed>\n");
+    return 1;
+  }
 
   /*
    *  Set most important value: the rock density rho (between 0 and 1)
    */
 
-  rho = 0.411;
+  rho = 0.2;
 
   /*
    *  Set the randum number seed and initialise the generator
@@ -71,8 +65,7 @@ int main(int argc, char *argv[])
 
   nhole = 0;
 
-  for (i=0; i < L; i++)
-    {
+  for (i=0; i < L; i++) {
       for (j=0; j < L; j++)
 	{
 	  r=uni();
@@ -167,7 +160,9 @@ int main(int argc, char *argv[])
 	      new[i][j] = newval;
 	    }
 	}
-      if (nchange == 0) break;
+      if (nchange == 0) {
+        printf("%d\n", step);
+        break;}
       /*
        *  Report progress every now and then
        */

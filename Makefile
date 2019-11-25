@@ -5,17 +5,20 @@ CFLAGS=	-O3 -cc=icc
 
 LFLAGS= $(CFLAGS)
 
-EXE=	percolate1152
+EXE=	percolate
 
 INC= \
 	percolate.h \
 	arralloc.h \
+	percwrite.h \
+	grid.h \
 
 SRC= \
 	percolate.c \
 	percwrite.c \
 	uni.c \
 	arralloc.c \
+	grid.c \
 
 #
 # No need to edit below this line

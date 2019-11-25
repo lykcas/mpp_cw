@@ -7,7 +7,7 @@
 # You will need to change the value of "select" below if you run on
 # more than 36 processes; the value of "ncpus" *is always 36*.
 
-#PBS -l select=1:ncpus=36
+#PBS -l select=2:ncpus=36
 
 module load mpt
 module load intel-compilers-18
@@ -16,19 +16,9 @@ module load intel-compilers-18
 # Change directory back to where the job was submitted from
 
 cd $PBS_O_WORKDIR
+echo '------rho = 0.2------'
+echo '-------203-----------'
+
+mpiexec_mpt -ppn 36 -n 1 ./percolate203_2 1564
 
 
-mpiexec_mpt -ppn 36 -n 1 ./percolate288 1564
-
-echo '----------------------'
-mpiexec_mpt -ppn 36 -n 1 ./percolate576 1564
-
-
-echo '----------------------'
-mpiexec_mpt -ppn 36 -n 1 ./percolate864 1564
-
-echo '----------------------'
-mpiexec_mpt -ppn 36 -n 1 ./percolate1152 1564
-
-echo '----------------------'
-mpiexec_mpt -ppn 36 -n 1 ./percolate1728 1564

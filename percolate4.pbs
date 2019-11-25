@@ -7,7 +7,7 @@
 # You will need to change the value of "select" below if you run on
 # more than 36 processes; the value of "ncpus" *is always 36*.
 
-#PBS -l select=8:ncpus=36
+#PBS -l select=1:ncpus=36
 
 module load mpt
 module load intel-compilers-18

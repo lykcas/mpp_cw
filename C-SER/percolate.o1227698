@@ -1,0 +1,58 @@
+anaconda(3):ERROR:105: Unable to locate a modulefile for 'anaconda/python3s'
+percolate: params are L = 288, rho = 0.200000, seed = 1564
+percolate: rho = 0.200000, actual density = 0.198519
+percolate: number of changes on step 200 is 27062
+percolate: number of changes on step 400 is 465
+432
+----------------   0.190000 ------------
+percolate: cluster DOES percolate
+percolate: params are L = 576, rho = 0.200000, seed = 1564
+percolate: rho = 0.200000, actual density = 0.200575
+percolate: number of changes on step 200 is 201374
+percolate: number of changes on step 400 is 113517
+percolate: number of changes on step 600 is 48959
+percolate: number of changes on step 800 is 2817
+865
+----------------   1.550000 ------------
+percolate: cluster DOES percolate
+percolate: params are L = 864, rho = 0.200000, seed = 1564
+percolate: rho = 0.200000, actual density = 0.200387
+percolate: number of changes on step 200 is 508124
+percolate: number of changes on step 400 is 387106
+percolate: number of changes on step 600 is 256410
+percolate: number of changes on step 800 is 156516
+percolate: number of changes on step 1000 is 58382
+percolate: number of changes on step 1200 is 6263
+1296
+----------------   5.250000 ------------
+percolate: cluster DOES percolate
+percolate: params are L = 1152, rho = 0.200000, seed = 1564
+percolate: rho = 0.200000, actual density = 0.200058
+percolate: number of changes on step 200 is 943079
+percolate: number of changes on step 400 is 798848
+percolate: number of changes on step 600 is 610033
+percolate: number of changes on step 800 is 440821
+percolate: number of changes on step 1000 is 312507
+percolate: number of changes on step 1200 is 184002
+percolate: number of changes on step 1400 is 66677
+percolate: number of changes on step 1600 is 9932
+1730
+----------------   12.390000 ------------
+percolate: cluster DOES percolate
+percolate: params are L = 1728, rho = 0.200000, seed = 1564
+percolate: rho = 0.200000, actual density = 0.199927
+percolate: number of changes on step 200 is 2211361
+percolate: number of changes on step 400 is 2035179
+percolate: number of changes on step 600 is 1810406
+percolate: number of changes on step 800 is 1543881
+percolate: number of changes on step 1000 is 1233220
+percolate: number of changes on step 1200 is 1015963
+percolate: number of changes on step 1400 is 819965
+percolate: number of changes on step 1600 is 621277
+percolate: number of changes on step 1800 is 424918
+percolate: number of changes on step 2000 is 227513
+percolate: number of changes on step 2200 is 96947
+percolate: number of changes on step 2400 is 23598
+2592
+----------------   41.790000 ------------
+percolate: cluster DOES percolate
